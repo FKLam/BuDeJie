@@ -1,0 +1,21 @@
+//
+//  BuDeJie.pch
+//  BuDeJie
+//
+//  Created by kun on 16/8/22.
+//  Copyright © 2016年 kun. All rights reserved.
+//
+
+#ifndef BuDeJie_pch
+#define BuDeJie_pch
+
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Item.h"
+
+#ifdef DEBUG // 调试
+#define FKLLog(...) NSLog(__VA_ARGS__)
+#else // 发布
+#define FKLog(...)
+#endif
+
+#endif /* BuDeJie_pch */
