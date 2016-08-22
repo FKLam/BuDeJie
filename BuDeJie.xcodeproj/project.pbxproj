@@ -20,6 +20,15 @@
 		BC7426791D6ACE140011AB76 /* UIBarButtonItem+Item.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426781D6ACE140011AB76 /* UIBarButtonItem+Item.m */; };
 		BC74267C1D6AD7690011AB76 /* FKLNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC74267B1D6AD7690011AB76 /* FKLNavigationController.m */; };
 		BC7426831D6AD97F0011AB76 /* FKLSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426821D6AD97F0011AB76 /* FKLSettingViewController.m */; };
+		BC74268A1D6B44D70011AB76 /* FKLADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426891D6B44D70011AB76 /* FKLADViewController.m */; };
+		BC74268C1D6B45D00011AB76 /* FKLADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC74268B1D6B45D00011AB76 /* FKLADViewController.xib */; };
+		BC7426951D6B52910011AB76 /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC74268E1D6B52910011AB76 /* LaunchImage-568h@2x.png */; };
+		BC7426961D6B52910011AB76 /* LaunchImage-700-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC74268F1D6B52910011AB76 /* LaunchImage-700-568h@2x.png */; };
+		BC7426971D6B52910011AB76 /* LaunchImage-700@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7426901D6B52910011AB76 /* LaunchImage-700@2x.png */; };
+		BC7426981D6B52910011AB76 /* LaunchImage-800-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7426911D6B52910011AB76 /* LaunchImage-800-667h@2x.png */; };
+		BC7426991D6B52910011AB76 /* LaunchImage-800-Portrait-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7426921D6B52910011AB76 /* LaunchImage-800-Portrait-736h@3x.png */; };
+		BC74269A1D6B52910011AB76 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7426931D6B52910011AB76 /* LaunchImage.png */; };
+		BC74269B1D6B52910011AB76 /* LaunchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC7426941D6B52910011AB76 /* LaunchImage@2x.png */; };
 		BCC3D2D21D6A01FC0036A834 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCC3D2D11D6A01FC0036A834 /* main.m */; };
 		BCC3D2DD1D6A01FC0036A834 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCC3D2DC1D6A01FC0036A834 /* Assets.xcassets */; };
 		BCC3D2E01D6A01FC0036A834 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCC3D2DE1D6A01FC0036A834 /* LaunchScreen.storyboard */; };
@@ -53,6 +62,16 @@
 		BC74267B1D6AD7690011AB76 /* FKLNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLNavigationController.m; sourceTree = "<group>"; };
 		BC7426811D6AD97F0011AB76 /* FKLSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSettingViewController.h; sourceTree = "<group>"; };
 		BC7426821D6AD97F0011AB76 /* FKLSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLSettingViewController.m; sourceTree = "<group>"; };
+		BC7426881D6B44D70011AB76 /* FKLADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLADViewController.h; sourceTree = "<group>"; };
+		BC7426891D6B44D70011AB76 /* FKLADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLADViewController.m; sourceTree = "<group>"; };
+		BC74268B1D6B45D00011AB76 /* FKLADViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLADViewController.xib; sourceTree = "<group>"; };
+		BC74268E1D6B52910011AB76 /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		BC74268F1D6B52910011AB76 /* LaunchImage-700-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700-568h@2x.png"; sourceTree = "<group>"; };
+		BC7426901D6B52910011AB76 /* LaunchImage-700@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-700@2x.png"; sourceTree = "<group>"; };
+		BC7426911D6B52910011AB76 /* LaunchImage-800-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-667h@2x.png"; sourceTree = "<group>"; };
+		BC7426921D6B52910011AB76 /* LaunchImage-800-Portrait-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-800-Portrait-736h@3x.png"; sourceTree = "<group>"; };
+		BC7426931D6B52910011AB76 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		BC7426941D6B52910011AB76 /* LaunchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage@2x.png"; sourceTree = "<group>"; };
 		BCC3D2CD1D6A01FB0036A834 /* BuDeJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuDeJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC3D2D11D6A01FC0036A834 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BCC3D2DC1D6A01FC0036A834 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,6 +93,7 @@
 		BC74263D1D6A7C880011AB76 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				BC7426841D6B44BE0011AB76 /* AD(广告) */,
 				BC74267D1D6AD95F0011AB76 /* Setting(设置) */,
 				BC7426651D6A869C0011AB76 /* Main(主要) */,
 				BC74263E1D6A7C880011AB76 /* Essence(精华) */,
@@ -345,6 +365,54 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BC7426841D6B44BE0011AB76 /* AD(广告) */ = {
+			isa = PBXGroup;
+			children = (
+				BC7426851D6B44BE0011AB76 /* Controller */,
+				BC7426861D6B44BE0011AB76 /* Model */,
+				BC7426871D6B44BE0011AB76 /* View */,
+			);
+			path = "AD(广告)";
+			sourceTree = "<group>";
+		};
+		BC7426851D6B44BE0011AB76 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BC7426881D6B44D70011AB76 /* FKLADViewController.h */,
+				BC7426891D6B44D70011AB76 /* FKLADViewController.m */,
+				BC74268B1D6B45D00011AB76 /* FKLADViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BC7426861D6B44BE0011AB76 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BC7426871D6B44BE0011AB76 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BC74268D1D6B52910011AB76 /* 启动图片 */ = {
+			isa = PBXGroup;
+			children = (
+				BC74268E1D6B52910011AB76 /* LaunchImage-568h@2x.png */,
+				BC74268F1D6B52910011AB76 /* LaunchImage-700-568h@2x.png */,
+				BC7426901D6B52910011AB76 /* LaunchImage-700@2x.png */,
+				BC7426911D6B52910011AB76 /* LaunchImage-800-667h@2x.png */,
+				BC7426921D6B52910011AB76 /* LaunchImage-800-Portrait-736h@3x.png */,
+				BC7426931D6B52910011AB76 /* LaunchImage.png */,
+				BC7426941D6B52910011AB76 /* LaunchImage@2x.png */,
+			);
+			path = "启动图片";
+			sourceTree = "<group>";
+		};
 		BCC3D2C41D6A01FB0036A834 = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +444,7 @@
 		BCC3D2D01D6A01FC0036A834 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BC74268D1D6B52910011AB76 /* 启动图片 */,
 				BCC3D2D11D6A01FC0036A834 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -441,7 +510,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCC3D2E01D6A01FC0036A834 /* LaunchScreen.storyboard in Resources */,
+				BC7426961D6B52910011AB76 /* LaunchImage-700-568h@2x.png in Resources */,
+				BC74269A1D6B52910011AB76 /* LaunchImage.png in Resources */,
 				BCC3D2DD1D6A01FC0036A834 /* Assets.xcassets in Resources */,
+				BC7426971D6B52910011AB76 /* LaunchImage-700@2x.png in Resources */,
+				BC7426991D6B52910011AB76 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
+				BC7426951D6B52910011AB76 /* LaunchImage-568h@2x.png in Resources */,
+				BC7426981D6B52910011AB76 /* LaunchImage-800-667h@2x.png in Resources */,
+				BC74268C1D6B45D00011AB76 /* FKLADViewController.xib in Resources */,
+				BC74269B1D6B52910011AB76 /* LaunchImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +538,7 @@
 				BC74267C1D6AD7690011AB76 /* FKLNavigationController.m in Sources */,
 				BC7426721D6AABF80011AB76 /* FKLTabBar.m in Sources */,
 				BC7426611D6A7D800011AB76 /* FKLNewViewController.m in Sources */,
+				BC74268A1D6B44D70011AB76 /* FKLADViewController.m in Sources */,
 				BC74266B1D6A87240011AB76 /* FKLTabBarController.m in Sources */,
 				BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */,
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,

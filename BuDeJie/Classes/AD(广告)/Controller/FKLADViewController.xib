@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FKLADViewController">
+            <connections>
+                <outlet property="LaunchImageView" destination="Hbv-fa-MTS" id="HWv-jl-qWy"/>
+                <outlet property="adContainView" destination="r9u-Zu-QHG" id="QDd-n8-9Dz"/>
+                <outlet property="view" destination="iN0-l3-epB" id="TuE-58-PVH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hbv-fa-MTS">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9u-Zu-QHG" userLabel="广告占位视图">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihX-05-SVp">
+                    <rect key="frame" x="520" y="20" width="60" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.63690350506756754" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="s05-s3-YDC"/>
+                    </constraints>
+                    <state key="normal" title="跳过(3)"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Hbv-fa-MTS" secondAttribute="bottom" id="GHE-nk-sJp"/>
+                <constraint firstAttribute="trailing" secondItem="r9u-Zu-QHG" secondAttribute="trailing" id="Ndv-UF-3pH"/>
+                <constraint firstAttribute="trailing" secondItem="Hbv-fa-MTS" secondAttribute="trailing" id="NtP-4P-oPS"/>
+                <constraint firstAttribute="bottom" secondItem="r9u-Zu-QHG" secondAttribute="bottom" id="PSX-yE-2r2"/>
+                <constraint firstItem="Hbv-fa-MTS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Si3-92-c8j"/>
+                <constraint firstItem="r9u-Zu-QHG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="TEx-5a-nA5"/>
+                <constraint firstItem="r9u-Zu-QHG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Yb7-TB-Khn"/>
+                <constraint firstAttribute="trailing" secondItem="ihX-05-SVp" secondAttribute="trailing" constant="20" id="e5b-S6-Lri"/>
+                <constraint firstItem="ihX-05-SVp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="e8y-0u-CCd"/>
+                <constraint firstItem="Hbv-fa-MTS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="vTB-4D-5og"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

@@ -7,8 +7,15 @@
 //
 
 #import "AppDelegate.h"
-#import "FKLTabBarController.h"
+#import "FKLADViewController.h"
 
+// 每次程序启动的时候进入广告界面
+/*
+ 1，在启动的时候，去加个广告界面
+ 2，启动完成的时候，加个广告界面（展示了启动图片）
+    1，程序一启动就进入广告界面，窗口的根控制器设置为广告控制器 ✅
+    2，直接往窗口上再加上一个广告界面，等几秒过去了，在把广告界面移除
+ */
 @interface AppDelegate ()
 
 @end
@@ -20,8 +27,9 @@
     // 创建窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     // 设置窗口根控制器
-    FKLTabBarController *tabBarVc = [[FKLTabBarController alloc] init];
-    self.window.rootViewController = tabBarVc;
+    FKLADViewController *adVc = [[FKLADViewController alloc] init];
+    // init -> initWithNibName 1,首先判断有没有指定nibName，2,判断下有没有跟类名同名xib
+    self.window.rootViewController = adVc;
     // 显示窗口，成为主窗口
     [self.window makeKeyAndVisible];
     return YES;
