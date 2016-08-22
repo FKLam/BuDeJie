@@ -21,7 +21,7 @@
     
     // 设置启动图片
     [self setupLaunchImage];
-    // 加载广告数据
+    // 加载广告数据 => 
     
 }
 #pragma mark - 设置启动图片
