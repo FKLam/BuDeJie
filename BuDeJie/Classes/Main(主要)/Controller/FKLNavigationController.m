@@ -26,10 +26,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 解决左滑手势失效
-    // 控制手势什么时候触发，只有非根控制器才需要出发手势
-    self.interactivePopGestureRecognizer.delegate = self;
     // 假死状态：程序还在运行，但是界面死了
-    
+    /*
+        为什么我们的手势不是全屏滑动 ＝>
+     */
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self.interactivePopGestureRecognizer.delegate action:@selector(handleNavigationTransition:)];
+    [self.view addGestureRecognizer:pan];
+    // 控制手势什么时候触发，只有非根控制器才需要出发手势
+    pan.delegate = self;
+    // 禁止之前手势
+    self.interactivePopGestureRecognizer.enabled = NO;
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
@@ -42,10 +48,14 @@
     // 真正跳转
     [super pushViewController:viewController animated:YES];
 }
-
+#pragma mark - 监听事件方法
 - (void)back
 {
     [self popViewControllerAnimated:YES];
+}
+- (void)handleNavigationTransition:(UIPanGestureRecognizer *)panGesture
+{
+    
 }
 #pragma mark - UIGestureRecognizerDelegate
 // 决定是否触发手势
@@ -53,6 +63,7 @@
 {
     return self.childViewControllers.count > 1;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
