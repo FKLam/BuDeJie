@@ -11,11 +11,13 @@
 #import "FKLSubTagItem.h"
 #import <MJExtension.h>
 #import "FKLSubTagCell.h"
+#import <SVProgressHUD.h>
 
 static NSString * const ID = @"cell";
 
 @interface FKLSubTagViewController ()
 @property (nonatomic, strong) NSMutableArray *subTags;
+@property (nonatomic, strong) AFHTTPSessionManager *mgr;
 @end
 
 @implementation FKLSubTagViewController
@@ -41,6 +43,7 @@ static NSString * const ID = @"cell";
 {
     // 创建请求会话管理者
     AFHTTPSessionManager *mgr = [AFHTTPSessionManager manager];
+    self.mgr = mgr;
     // 拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"tag_recommend";
@@ -48,13 +51,16 @@ static NSString * const ID = @"cell";
     parameters[@"c"] = @"topic";
     __weak typeof( self ) weakSelf = self;
     // 发送请求
+    [SVProgressHUD showWithStatus:@"正在加载ing..."];
     [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject) {
         
         NSArray *tempArray = [FKLSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
         [weakSelf.subTags addObjectsFromArray:tempArray];
         [weakSelf.tableView reloadData];
+        [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         FKLLog(@"%@", error);
+        [SVProgressHUD showErrorWithStatus:@"加载数据失败"];
     }];
 }
 
@@ -89,5 +95,13 @@ static NSString * const ID = @"cell";
         _subTags = [NSMutableArray array];
     }
     return _subTags;
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    // 销毁指示器
+    [SVProgressHUD dismiss];
+    // 取消之前的请求
+    [self.mgr.dataTasks makeObjectsPerformSelector:@selector(cancel)];
 }
 @end
