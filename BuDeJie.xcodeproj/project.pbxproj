@@ -12,6 +12,7 @@
 		BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */; };
 		BC6897551D6BEACD004AAB53 /* FKLSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897531D6BEACD004AAB53 /* FKLSubTagCell.m */; };
 		BC6897561D6BEACD004AAB53 /* FKLSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6897541D6BEACD004AAB53 /* FKLSubTagCell.xib */; };
+		BC6897581D6C26C6004AAB53 /* FKLFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6897571D6C26C6004AAB53 /* FKLFriendTrendViewController.xib */; };
 		BC7426551D6A7C880011AB76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426501D6A7C880011AB76 /* AppDelegate.m */; };
 		BC7426581D6A7CFF0011AB76 /* FKLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426571D6A7CFF0011AB76 /* FKLEssenceViewController.m */; };
 		BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC74265A1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m */; };
@@ -51,6 +52,7 @@
 		BC6897521D6BEACD004AAB53 /* FKLSubTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagCell.h; sourceTree = "<group>"; };
 		BC6897531D6BEACD004AAB53 /* FKLSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLSubTagCell.m; sourceTree = "<group>"; };
 		BC6897541D6BEACD004AAB53 /* FKLSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLSubTagCell.xib; sourceTree = "<group>"; };
+		BC6897571D6C26C6004AAB53 /* FKLFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLFriendTrendViewController.xib; sourceTree = "<group>"; };
 		BC74264F1D6A7C880011AB76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC7426501D6A7C880011AB76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BC7426561D6A7CFF0011AB76 /* FKLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLEssenceViewController.h; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				BC7426591D6A7D1E0011AB76 /* FKLFriendTrendViewController.h */,
 				BC74265A1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m */,
+				BC6897571D6C26C6004AAB53 /* FKLFriendTrendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC6897581D6C26C6004AAB53 /* FKLFriendTrendViewController.xib in Resources */,
 				BCC3D2E01D6A01FC0036A834 /* LaunchScreen.storyboard in Resources */,
 				BC7426961D6B52910011AB76 /* LaunchImage-700-568h@2x.png in Resources */,
 				BC74269A1D6B52910011AB76 /* LaunchImage.png in Resources */,
