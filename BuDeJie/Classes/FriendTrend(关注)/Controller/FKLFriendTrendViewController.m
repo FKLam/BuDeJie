@@ -7,6 +7,7 @@
 //
 
 #import "FKLFriendTrendViewController.h"
+#import "FKLLoginRegisterViewController.h"
 
 @interface FKLFriendTrendViewController ()
 
@@ -17,6 +18,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupNavBar];
+}
+// 点击登录注册按钮
+- (IBAction)clickLoginRegister:(id)sender {
+    // 进入到登录注册界面
+    FKLLoginRegisterViewController *loginVc = [[FKLLoginRegisterViewController alloc] init];
+    [self presentViewController:loginVc animated:YES completion:nil];
 }
 
 #pragma mark - 设置导航条

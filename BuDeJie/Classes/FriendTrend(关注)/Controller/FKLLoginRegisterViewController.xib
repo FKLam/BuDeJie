@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FKLLoginRegisterViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="DYJ-hS-TzT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHX-WY-Ftg" userLabel="Top">
+                    <rect key="frame" x="0.0" y="20" width="375" height="35"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IUI-zp-vOm">
+                            <rect key="frame" x="10" y="0.0" width="16" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="fS4-IZ-jg9"/>
+                            </constraints>
+                            <state key="normal" image="login_close_icon"/>
+                            <connections>
+                                <action selector="close:" destination="-1" eventType="touchUpInside" id="vlQ-NV-Zs7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOw-zI-CLE">
+                            <rect key="frame" x="273" y="0.0" width="92" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="92" id="ghc-xd-W6S"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" title="注册帐号"/>
+                            <state key="selected" title="已有帐号？"/>
+                            <connections>
+                                <action selector="registerClick:" destination="-1" eventType="touchUpInside" id="Ztp-n5-clo"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="IUI-zp-vOm" secondAttribute="bottom" id="QeE-g7-KYg"/>
+                        <constraint firstItem="fOw-zI-CLE" firstAttribute="top" secondItem="ZHX-WY-Ftg" secondAttribute="top" id="TRx-bx-Z2o"/>
+                        <constraint firstItem="IUI-zp-vOm" firstAttribute="top" secondItem="ZHX-WY-Ftg" secondAttribute="top" id="TzU-aD-eA8"/>
+                        <constraint firstAttribute="height" constant="35" id="gMp-Mg-bgz"/>
+                        <constraint firstAttribute="bottom" secondItem="fOw-zI-CLE" secondAttribute="bottom" id="i2Q-sh-ruT"/>
+                        <constraint firstAttribute="trailing" secondItem="fOw-zI-CLE" secondAttribute="trailing" constant="10" id="k7x-xk-cgp"/>
+                        <constraint firstItem="IUI-zp-vOm" firstAttribute="leading" secondItem="ZHX-WY-Ftg" secondAttribute="leading" constant="10" id="kMb-Ih-fHH"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCj-2j-DKK" userLabel="Middle">
+                    <rect key="frame" x="0.0" y="95" width="375" height="300"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="VUK-GW-XeZ"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Imb-77-spu" userLabel="Bottom">
+                    <rect key="frame" x="0.0" y="527" width="375" height="120"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="5ms-Kc-rQF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Imb-77-spu" secondAttribute="bottom" constant="20" id="1AQ-ug-iw3"/>
+                <constraint firstAttribute="trailing" secondItem="DYJ-hS-TzT" secondAttribute="trailing" id="2qZ-fL-th8"/>
+                <constraint firstItem="ZHX-WY-Ftg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Apz-dS-sZB"/>
+                <constraint firstItem="ZHX-WY-Ftg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E3n-xh-Qxq"/>
+                <constraint firstAttribute="trailing" secondItem="Imb-77-spu" secondAttribute="trailing" id="F9H-Ty-8K9"/>
+                <constraint firstItem="zCj-2j-DKK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O3Z-HF-vHX"/>
+                <constraint firstItem="DYJ-hS-TzT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="THE-Rn-n2d"/>
+                <constraint firstItem="zCj-2j-DKK" firstAttribute="top" secondItem="ZHX-WY-Ftg" secondAttribute="bottom" constant="40" id="ZZ2-05-ZUn"/>
+                <constraint firstAttribute="bottom" secondItem="DYJ-hS-TzT" secondAttribute="bottom" id="eG4-Uj-oRn"/>
+                <constraint firstItem="DYJ-hS-TzT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g3B-iK-S36"/>
+                <constraint firstItem="Imb-77-spu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="j6p-ae-KOx"/>
+                <constraint firstAttribute="trailing" secondItem="ZHX-WY-Ftg" secondAttribute="trailing" id="num-j4-Pha"/>
+                <constraint firstAttribute="trailing" secondItem="zCj-2j-DKK" secondAttribute="trailing" id="oVc-9x-Bxg"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_close_icon" width="16" height="16"/>
+        <image name="login_register_background" width="320" height="568"/>
+    </resources>
+</document>

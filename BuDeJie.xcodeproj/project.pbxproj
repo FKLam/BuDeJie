@@ -13,6 +13,8 @@
 		BC6897551D6BEACD004AAB53 /* FKLSubTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897531D6BEACD004AAB53 /* FKLSubTagCell.m */; };
 		BC6897561D6BEACD004AAB53 /* FKLSubTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6897541D6BEACD004AAB53 /* FKLSubTagCell.xib */; };
 		BC6897581D6C26C6004AAB53 /* FKLFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6897571D6C26C6004AAB53 /* FKLFriendTrendViewController.xib */; };
+		BC68975C1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68975A1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m */; };
+		BC68975D1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC68975B1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib */; };
 		BC7426551D6A7C880011AB76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426501D6A7C880011AB76 /* AppDelegate.m */; };
 		BC7426581D6A7CFF0011AB76 /* FKLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426571D6A7CFF0011AB76 /* FKLEssenceViewController.m */; };
 		BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC74265A1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m */; };
@@ -53,6 +55,9 @@
 		BC6897531D6BEACD004AAB53 /* FKLSubTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLSubTagCell.m; sourceTree = "<group>"; };
 		BC6897541D6BEACD004AAB53 /* FKLSubTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLSubTagCell.xib; sourceTree = "<group>"; };
 		BC6897571D6C26C6004AAB53 /* FKLFriendTrendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLFriendTrendViewController.xib; sourceTree = "<group>"; };
+		BC6897591D6C2BDC004AAB53 /* FKLLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLLoginRegisterViewController.h; sourceTree = "<group>"; };
+		BC68975A1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLLoginRegisterViewController.m; sourceTree = "<group>"; };
+		BC68975B1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		BC74264F1D6A7C880011AB76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC7426501D6A7C880011AB76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BC7426561D6A7CFF0011AB76 /* FKLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLEssenceViewController.h; sourceTree = "<group>"; };
@@ -176,6 +181,9 @@
 				BC7426591D6A7D1E0011AB76 /* FKLFriendTrendViewController.h */,
 				BC74265A1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m */,
 				BC6897571D6C26C6004AAB53 /* FKLFriendTrendViewController.xib */,
+				BC6897591D6C2BDC004AAB53 /* FKLLoginRegisterViewController.h */,
+				BC68975A1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m */,
+				BC68975B1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -574,6 +582,7 @@
 				BC6897561D6BEACD004AAB53 /* FKLSubTagCell.xib in Resources */,
 				BC74268C1D6B45D00011AB76 /* FKLADViewController.xib in Resources */,
 				BC74269B1D6B52910011AB76 /* LaunchImage@2x.png in Resources */,
+				BC68975D1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +647,7 @@
 				BC7426641D6A7D8E0011AB76 /* FKLPublishViewController.m in Sources */,
 				BC74266F1D6A90F60011AB76 /* UIImage+Image.m in Sources */,
 				BC74265E1D6A7D420011AB76 /* FKLMeViewController.m in Sources */,
+				BC68975C1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m in Sources */,
 				BC74267C1D6AD7690011AB76 /* FKLNavigationController.m in Sources */,
 				BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */,
 				BC7426721D6AABF80011AB76 /* FKLTabBar.m in Sources */,
