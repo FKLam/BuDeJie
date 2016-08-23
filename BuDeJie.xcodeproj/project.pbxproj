@@ -15,6 +15,8 @@
 		BC6897581D6C26C6004AAB53 /* FKLFriendTrendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6897571D6C26C6004AAB53 /* FKLFriendTrendViewController.xib */; };
 		BC68975C1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68975A1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m */; };
 		BC68975D1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC68975B1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib */; };
+		BC6897601D6C3393004AAB53 /* FKLLoginRegisterView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68975F1D6C3393004AAB53 /* FKLLoginRegisterView.m */; };
+		BC6897621D6C33A5004AAB53 /* FKLLoginRegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC6897611D6C33A5004AAB53 /* FKLLoginRegisterView.xib */; };
 		BC7426551D6A7C880011AB76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426501D6A7C880011AB76 /* AppDelegate.m */; };
 		BC7426581D6A7CFF0011AB76 /* FKLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426571D6A7CFF0011AB76 /* FKLEssenceViewController.m */; };
 		BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC74265A1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m */; };
@@ -58,6 +60,9 @@
 		BC6897591D6C2BDC004AAB53 /* FKLLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLLoginRegisterViewController.h; sourceTree = "<group>"; };
 		BC68975A1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLLoginRegisterViewController.m; sourceTree = "<group>"; };
 		BC68975B1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		BC68975E1D6C3393004AAB53 /* FKLLoginRegisterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLLoginRegisterView.h; sourceTree = "<group>"; };
+		BC68975F1D6C3393004AAB53 /* FKLLoginRegisterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLLoginRegisterView.m; sourceTree = "<group>"; };
+		BC6897611D6C33A5004AAB53 /* FKLLoginRegisterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLLoginRegisterView.xib; sourceTree = "<group>"; };
 		BC74264F1D6A7C880011AB76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC7426501D6A7C880011AB76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BC7426561D6A7CFF0011AB76 /* FKLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLEssenceViewController.h; sourceTree = "<group>"; };
@@ -198,6 +203,9 @@
 		BC7426451D6A7C880011AB76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC68975E1D6C3393004AAB53 /* FKLLoginRegisterView.h */,
+				BC68975F1D6C3393004AAB53 /* FKLLoginRegisterView.m */,
+				BC6897611D6C33A5004AAB53 /* FKLLoginRegisterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -581,6 +589,7 @@
 				BC7426981D6B52910011AB76 /* LaunchImage-800-667h@2x.png in Resources */,
 				BC6897561D6BEACD004AAB53 /* FKLSubTagCell.xib in Resources */,
 				BC74268C1D6B45D00011AB76 /* FKLADViewController.xib in Resources */,
+				BC6897621D6C33A5004AAB53 /* FKLLoginRegisterView.xib in Resources */,
 				BC74269B1D6B52910011AB76 /* LaunchImage@2x.png in Resources */,
 				BC68975D1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.xib in Resources */,
 			);
@@ -660,6 +669,7 @@
 				BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */,
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,
 				BC7426751D6AC3AC0011AB76 /* UIView+Frame.m in Sources */,
+				BC6897601D6C3393004AAB53 /* FKLLoginRegisterView.m in Sources */,
 				BC7426831D6AD97F0011AB76 /* FKLSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

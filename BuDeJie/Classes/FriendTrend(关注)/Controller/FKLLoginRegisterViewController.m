@@ -7,8 +7,10 @@
 //
 
 #import "FKLLoginRegisterViewController.h"
+#import "FKLLoginRegisterView.h"
 
 @interface FKLLoginRegisterViewController ()
+@property (weak, nonatomic) IBOutlet UIView *middleView;
 
 @end
 
@@ -16,7 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    // 创建登录view
+    FKLLoginRegisterView *loginView = [FKLLoginRegisterView loginView];
+    // 添加到中间的view上
+    [self.middleView addSubview:loginView];
 }
 
 - (void)didReceiveMemoryWarning {
