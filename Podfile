@@ -7,4 +7,6 @@ target 'BuDeJie' do
 
   # Pods for BuDeJie
   pod 'AFNetworking'
+  pod 'MJExtension'
+  pod 'SDWebImage'
 end
