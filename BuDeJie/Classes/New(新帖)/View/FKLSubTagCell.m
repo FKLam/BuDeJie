@@ -21,7 +21,12 @@
 
 @end
 @implementation FKLSubTagCell
-
+- (void)setFrame:(CGRect)frame
+{
+    frame.size.height -= 1;
+    // 这才是真正给cell赋值
+    [super setFrame:frame];
+}
 // 从xib加载就会调用一次
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -29,6 +34,8 @@
     // 设置头像圆角
     _iconView.layer.cornerRadius = 30.0;
     _iconView.layer.masksToBounds = YES;
+    // 清空cell的约束边缘
+//    self.layoutMargins = UIEdgeInsetsZero;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -42,10 +49,33 @@
     _item = item;
     
     // 设置内容
+    [self resolveNum];
+    
     _nameLabel.text = item.theme_name;
+//    __weak typeof( self ) weakSelf = self;
+//    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:SDWebImageCacheMemoryOnly completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+//        // 开启图形上下文
+//        UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
+//        // 描述裁剪区域
+//        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+//        // 设置裁剪区域
+//        [path addClip];
+//        // 画图片
+//        [image drawAtPoint:CGPointZero];
+//        // 取出图片
+//        image = UIGraphicsGetImageFromCurrentImageContext();
+//        // 关闭上下文
+//        UIGraphicsEndImageContext();
+//        weakSelf.iconView.image = image;
+//    }];
+    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+}
+// 处理订阅数据
+- (void)resolveNum
+{
     // 判断有没有 > 10000
-    NSString *numStr = [NSString stringWithFormat:@"%@人订阅", item.sub_number];
-    NSInteger num = item.sub_number.integerValue;
+    NSString *numStr = [NSString stringWithFormat:@"%@人订阅", _item.sub_number];
+    NSInteger num = _item.sub_number.integerValue;
     if ( num > 10000 )
     {
         CGFloat numF = num / 10000.0;
@@ -53,7 +83,5 @@
         numStr = [numStr stringByReplacingOccurrencesOfString:@".0" withString:@""];
     }
     _numLabel.text = numStr;
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
 }
-
 @end

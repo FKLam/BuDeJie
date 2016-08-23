@@ -32,6 +32,7 @@
 {
     // 进入推荐标签界面
     FKLSubTagViewController *subTabVc = [[FKLSubTagViewController alloc] init];
+    subTabVc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:subTabVc animated:YES];
 }
 - (void)didReceiveMemoryWarning {

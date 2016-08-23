@@ -29,6 +29,11 @@ static NSString * const ID = @"cell";
     // 注册cell
     [self.tableView registerNib:[UINib nibWithNibName:@"FKLSubTagCell" bundle:nil] forCellReuseIdentifier:ID];
     self.tableView.rowHeight = 80.0;
+    // 处理cell分隔线 1，自定义分割线 2，系统属性（iOS8才支持） 3，万能方式（重写cell的setFrame）了解tableView底层实现了解 1，取消系统自带分隔线 2，把tableView背景色设置为分隔线的背景色 3，重写setFrame
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = FKLColor(220, 220, 221);
+    // 清空tableView分隔线内边距 清空cell的约束边缘
+//    self.tableView.separatorInset = UIEdgeInsetsZero;
 }
 
 #pragma mark - 请求数据
