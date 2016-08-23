@@ -7,6 +7,7 @@
 //
 
 #import "FKLNewViewController.h"
+#import "FKLSubTagViewController.h"
 
 @interface FKLNewViewController ()
 
@@ -29,7 +30,9 @@
 #pragma mark - 导航栏左边按钮监听方法
 - (void)leftBarButtonClick
 {
-    
+    // 进入推荐标签界面
+    FKLSubTagViewController *subTabVc = [[FKLSubTagViewController alloc] init];
+    [self.navigationController pushViewController:subTabVc animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

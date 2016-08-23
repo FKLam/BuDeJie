@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */; };
+		BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */; };
+		BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */; };
 		BC7426551D6A7C880011AB76 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426501D6A7C880011AB76 /* AppDelegate.m */; };
 		BC7426581D6A7CFF0011AB76 /* FKLEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC7426571D6A7CFF0011AB76 /* FKLEssenceViewController.m */; };
 		BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC74265A1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m */; };
@@ -40,6 +42,10 @@
 		317728C48762837B0FA06524 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC6897491D6BD2AF004AAB53 /* FKLADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLADItem.h; sourceTree = "<group>"; };
 		BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLADItem.m; sourceTree = "<group>"; };
+		BC68974C1D6BE3F4004AAB53 /* FKLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagViewController.h; sourceTree = "<group>"; };
+		BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLSubTagViewController.m; sourceTree = "<group>"; };
+		BC68974F1D6BE815004AAB53 /* FKLSubTagItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagItem.h; sourceTree = "<group>"; };
+		BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLSubTagItem.m; sourceTree = "<group>"; };
 		BC74264F1D6A7C880011AB76 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BC7426501D6A7C880011AB76 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BC7426561D6A7CFF0011AB76 /* FKLEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLEssenceViewController.h; sourceTree = "<group>"; };
@@ -228,6 +234,8 @@
 			children = (
 				BC74265F1D6A7D800011AB76 /* FKLNewViewController.h */,
 				BC7426601D6A7D800011AB76 /* FKLNewViewController.m */,
+				BC68974C1D6BE3F4004AAB53 /* FKLSubTagViewController.h */,
+				BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +243,8 @@
 		BC74264C1D6A7C880011AB76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC68974F1D6BE815004AAB53 /* FKLSubTagItem.h */,
+				BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -619,7 +629,9 @@
 				BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */,
 				BC7426721D6AABF80011AB76 /* FKLTabBar.m in Sources */,
 				BC7426611D6A7D800011AB76 /* FKLNewViewController.m in Sources */,
+				BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */,
 				BC74268A1D6B44D70011AB76 /* FKLADViewController.m in Sources */,
+				BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */,
 				BC74266B1D6A87240011AB76 /* FKLTabBarController.m in Sources */,
 				BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */,
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,
