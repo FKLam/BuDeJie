@@ -11,14 +11,17 @@
 #import "FKLADItem.h"
 #import <MJExtension.h>
 #import <UIImageView+WebCache.h>
+#import "FKLTabBarController.h"
 
 #define code2String @"phcqnauGuHYkFMRquANhmgN_IauBThfqmgKsUARhIWdGULPxnz3vndtkQW08nau_I1Y1P1Rhmhwz5Hb8nBuL5HDknWRhTA_qmvqVQhGGUhI_py4MQhF1TvChmgKY5H6hmyPW5RFRHzuET1dGULnhuAN85HchUy7s5HDhIywGujY3P1n3mWb1PvDLnvF-Pyf4mHR4nyRvmWPBmhwBPjcLPyfsPHT3uWm4FMPLpHYkFh7sTA-b5yRzPj6sPvRdFhPdTWYsFMKzuykEmyfqnauGuAu95Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiu9mLfqHbD_H70hTv6qnHn1PauVmynqnjclnj0lnj0lnj0lnj0lnj0hThYqniuVujYkFhkC5HRvnB3dFh7spyfqnW0srj64nBu9TjYsFMub5HDhTZFEujdzTLK_mgPCFMP85Rnsnbfknbm1QHnkwW6VPjujnBdKfWD1QHnsnbRsnHwKfYwAwiuBnHfdnjD4rjnvPWYkFh7sTZu-TWY1QW68nBuWUHYdnHchIAYqPHDzFhqsmyPGIZbqniuYThuYTjd1uAVxnz3vnzu9IjYzFh6qP1RsFMws5y-fpAq8uHT_nBuYmycqnau1IjYkPjRsnHb3n1mvnHDkQWD4niuVmybqniu1uy3qwD-HQDFKHakHHNn_HR7fQ7uDQ7PcHzkHiR3_RYqNQD7jfzkPiRn_wdKHQDP5HikPfRb_fNc_NbwPQDdRHzkDiNchTvwW5HnvPj0zQWndnHRvnBsdPWb4ri3kPW0kPHmhmLnqPH6LP1ndm1-WPyDvnHKBrAw9nju9PHIhmH9WmH6zrjRhTv7_5iu85HDhTvd15HDhTLTqP1RsFh4ETjYYPW0sPzuVuyYqn1mYnjc8nWbvrjTdQjRvrHb4QWDvnjDdPBuk5yRzPj6sPvRdgvPsTBu_my4bTvP9TARqnam"
 
 @interface FKLADViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *LaunchImageView;
 @property (weak, nonatomic) IBOutlet UIView *adContainView;
+@property (weak, nonatomic) IBOutlet UIButton *jumpBtn;
 @property (nonatomic, strong) UIImageView *adView;
 @property (nonatomic, strong) FKLADItem *item;
+@property (nonatomic, weak) NSTimer *timer;
 @end
 
 @implementation FKLADViewController
@@ -30,6 +33,8 @@
     [self setupLaunchImage];
     // 加载广告数据 => 
     [self loadADData];
+    // 创建定时器
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timeChange) userInfo:nil repeats:YES];
 }
 #pragma mark - 设置启动图片
 - (void)setupLaunchImage
@@ -99,6 +104,31 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+#pragma mark - 定时器调用的方法
+- (void)timeChange
+{
+    // 倒计时
+    static int i = 3;
+    if ( 0 == i )
+    {
+        // 销毁广告界面
+        FKLTabBarController *tabBarVc = [[FKLTabBarController alloc] init];
+        [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+        // 干掉定时器
+        [self.timer invalidate];
+    }
+    i--;
+    // 设置跳转按钮文子
+    [self.jumpBtn setTitle:[NSString stringWithFormat:@"跳转(%d)", i] forState:UIControlStateNormal];
+}
+#pragma mark - 跳转按钮的点击
+- (IBAction)jumpBtnClick:(id)sender {
+    // 销毁广告界面
+    FKLTabBarController *tabBarVc = [[FKLTabBarController alloc] init];
+    [UIApplication sharedApplication].keyWindow.rootViewController = tabBarVc;
+    // 干掉定时器
+    [self.timer invalidate];
 }
 #pragma mark - 监听点击广告事件
 - (void)tap
