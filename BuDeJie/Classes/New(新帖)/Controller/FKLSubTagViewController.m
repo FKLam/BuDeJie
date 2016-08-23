@@ -10,6 +10,9 @@
 #import <AFNetworking.h>
 #import "FKLSubTagItem.h"
 #import <MJExtension.h>
+#import "FKLSubTagCell.h"
+
+static NSString * const ID = @"cell";
 
 @interface FKLSubTagViewController ()
 @property (nonatomic, strong) NSMutableArray *subTags;
@@ -20,8 +23,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"推荐标签";
     // 展示标签数据 －> 请求数据（接口文档）
     [self loadData];
+    // 注册cell
+    [self.tableView registerNib:[UINib nibWithNibName:@"FKLSubTagCell" bundle:nil] forCellReuseIdentifier:ID];
+    self.tableView.rowHeight = 80.0;
 }
 
 #pragma mark - 请求数据
@@ -62,16 +69,11 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *ID = @"cell";
     // 自定义cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if ( nil == cell )
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-    }
+    FKLSubTagCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
     // 获取模型
     FKLSubTagItem *item = self.subTags[indexPath.row];
-    cell.textLabel.text = item.theme_name;
+    cell.item = item;
     return cell;
 }
 #pragma mark - getter methods
