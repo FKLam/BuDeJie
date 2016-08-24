@@ -32,7 +32,6 @@
     // 添加到中间的view上
     [self.middleView addSubview:self.loginView];
     [self.middleView addSubview:self.registerView];
-    
     [self.bottomView addSubview:self.fastLoginView];
 }
 - (void)viewDidLayoutSubviews
@@ -41,6 +40,11 @@
     [super viewDidLayoutSubviews];
     self.loginView.frame = CGRectMake(0, 0, self.view.fkl_width, self.middleView.fkl_height);
     self.registerView.frame = CGRectMake(self.view.fkl_width, 0, self.view.fkl_width, self.middleView.fkl_height);
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.view endEditing:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

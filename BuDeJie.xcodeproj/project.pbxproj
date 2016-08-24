@@ -10,6 +10,7 @@
 		BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A055C1D6D39670024305D /* FKLFastLoginView.m */; };
 		BC1A055F1D6D39750024305D /* FKLFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */; };
 		BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05611D6D3EEA0024305D /* FKLFastButton.m */; };
+		BC1A05651D6D4B5E0024305D /* FKLLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05641D6D4B5E0024305D /* FKLLoginField.m */; };
 		BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */; };
 		BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */; };
 		BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */; };
@@ -55,6 +56,8 @@
 		BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLFastLoginView.xib; sourceTree = "<group>"; };
 		BC1A05601D6D3EEA0024305D /* FKLFastButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLFastButton.h; sourceTree = "<group>"; };
 		BC1A05611D6D3EEA0024305D /* FKLFastButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLFastButton.m; sourceTree = "<group>"; };
+		BC1A05631D6D4B5E0024305D /* FKLLoginField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLLoginField.h; sourceTree = "<group>"; };
+		BC1A05641D6D4B5E0024305D /* FKLLoginField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLLoginField.m; sourceTree = "<group>"; };
 		BC6897491D6BD2AF004AAB53 /* FKLADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLADItem.h; sourceTree = "<group>"; };
 		BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLADItem.m; sourceTree = "<group>"; };
 		BC68974C1D6BE3F4004AAB53 /* FKLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagViewController.h; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 				BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */,
 				BC1A05601D6D3EEA0024305D /* FKLFastButton.h */,
 				BC1A05611D6D3EEA0024305D /* FKLFastButton.m */,
+				BC1A05631D6D4B5E0024305D /* FKLLoginField.h */,
+				BC1A05641D6D4B5E0024305D /* FKLLoginField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -684,6 +689,7 @@
 				BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */,
 				BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */,
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,
+				BC1A05651D6D4B5E0024305D /* FKLLoginField.m in Sources */,
 				BC7426751D6AC3AC0011AB76 /* UIView+Frame.m in Sources */,
 				BC6897601D6C3393004AAB53 /* FKLLoginRegisterView.m in Sources */,
 				BC7426831D6AD97F0011AB76 /* FKLSettingViewController.m in Sources */,
