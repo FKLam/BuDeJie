@@ -57,4 +57,26 @@
 {
     return self.center;
 }
+- (void)setFkl_centerX:(CGFloat)fkl_centerX
+{
+    CGPoint center = self.center;
+    center.x = fkl_centerX;
+    self.center = center;
+}
+- (CGFloat)fkl_centerX
+{
+    CGPoint center = self.center;
+    return center.x;
+}
+- (void)setFkl_centerY:(CGFloat)fkl_centerY
+{
+    CGPoint center = self.center;
+    center.y = fkl_centerY;
+    self.center = center;
+}
+- (CGFloat)fkl_centerY
+{
+    CGPoint center = self.center;
+    return center.y;
+}
 @end

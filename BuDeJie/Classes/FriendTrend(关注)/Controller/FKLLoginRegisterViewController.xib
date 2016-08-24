@@ -3,10 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FKLLoginRegisterViewController">
             <connections>
+                <outlet property="bottomView" destination="Imb-77-spu" id="R4E-Fr-Oyb"/>
+                <outlet property="leadingCons" destination="O3Z-HF-vHX" id="qpZ-Gy-4di"/>
                 <outlet property="middleView" destination="zCj-2j-DKK" id="TWL-if-dYv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -57,7 +60,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zCj-2j-DKK" userLabel="Middle">
-                    <rect key="frame" x="0.0" y="95" width="375" height="300"/>
+                    <rect key="frame" x="0.0" y="95" width="750" height="300"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="300" id="VUK-GW-XeZ"/>
@@ -76,6 +79,7 @@
                 <constraint firstAttribute="bottom" secondItem="Imb-77-spu" secondAttribute="bottom" constant="20" id="1AQ-ug-iw3"/>
                 <constraint firstAttribute="trailing" secondItem="DYJ-hS-TzT" secondAttribute="trailing" id="2qZ-fL-th8"/>
                 <constraint firstItem="ZHX-WY-Ftg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="Apz-dS-sZB"/>
+                <constraint firstItem="zCj-2j-DKK" firstAttribute="width" secondItem="DYJ-hS-TzT" secondAttribute="width" multiplier="2" id="CgV-sL-T1p"/>
                 <constraint firstItem="ZHX-WY-Ftg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="E3n-xh-Qxq"/>
                 <constraint firstAttribute="trailing" secondItem="Imb-77-spu" secondAttribute="trailing" id="F9H-Ty-8K9"/>
                 <constraint firstItem="zCj-2j-DKK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="O3Z-HF-vHX"/>
@@ -88,6 +92,12 @@
                 <constraint firstAttribute="trailing" secondItem="zCj-2j-DKK" secondAttribute="trailing" id="oVc-9x-Bxg"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="oVc-9x-Bxg"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="36.5" y="383.5"/>
         </view>
     </objects>
     <resources>

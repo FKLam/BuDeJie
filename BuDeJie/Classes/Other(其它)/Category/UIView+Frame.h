@@ -14,4 +14,6 @@
 @property (nonatomic, assign) CGPoint fkl_center;
 @property (nonatomic, assign) CGFloat fkl_x;
 @property (nonatomic, assign) CGFloat fkl_y;
+@property (nonatomic, assign) CGFloat fkl_centerX;
+@property (nonatomic, assign) CGFloat fkl_centerY;
 @end

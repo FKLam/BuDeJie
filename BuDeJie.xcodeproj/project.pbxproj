@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A055C1D6D39670024305D /* FKLFastLoginView.m */; };
+		BC1A055F1D6D39750024305D /* FKLFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */; };
+		BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05611D6D3EEA0024305D /* FKLFastButton.m */; };
 		BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */; };
 		BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */; };
 		BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */; };
@@ -47,6 +50,11 @@
 
 /* Begin PBXFileReference section */
 		317728C48762837B0FA06524 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1A055B1D6D39670024305D /* FKLFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLFastLoginView.h; sourceTree = "<group>"; };
+		BC1A055C1D6D39670024305D /* FKLFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLFastLoginView.m; sourceTree = "<group>"; };
+		BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLFastLoginView.xib; sourceTree = "<group>"; };
+		BC1A05601D6D3EEA0024305D /* FKLFastButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLFastButton.h; sourceTree = "<group>"; };
+		BC1A05611D6D3EEA0024305D /* FKLFastButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLFastButton.m; sourceTree = "<group>"; };
 		BC6897491D6BD2AF004AAB53 /* FKLADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLADItem.h; sourceTree = "<group>"; };
 		BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLADItem.m; sourceTree = "<group>"; };
 		BC68974C1D6BE3F4004AAB53 /* FKLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagViewController.h; sourceTree = "<group>"; };
@@ -206,6 +214,11 @@
 				BC68975E1D6C3393004AAB53 /* FKLLoginRegisterView.h */,
 				BC68975F1D6C3393004AAB53 /* FKLLoginRegisterView.m */,
 				BC6897611D6C33A5004AAB53 /* FKLLoginRegisterView.xib */,
+				BC1A055B1D6D39670024305D /* FKLFastLoginView.h */,
+				BC1A055C1D6D39670024305D /* FKLFastLoginView.m */,
+				BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */,
+				BC1A05601D6D3EEA0024305D /* FKLFastButton.h */,
+				BC1A05611D6D3EEA0024305D /* FKLFastButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -578,6 +591,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1A055F1D6D39750024305D /* FKLFastLoginView.xib in Resources */,
 				BC6897581D6C26C6004AAB53 /* FKLFriendTrendViewController.xib in Resources */,
 				BCC3D2E01D6A01FC0036A834 /* LaunchScreen.storyboard in Resources */,
 				BC7426961D6B52910011AB76 /* LaunchImage-700-568h@2x.png in Resources */,
@@ -660,12 +674,14 @@
 				BC74267C1D6AD7690011AB76 /* FKLNavigationController.m in Sources */,
 				BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */,
 				BC7426721D6AABF80011AB76 /* FKLTabBar.m in Sources */,
+				BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */,
 				BC7426611D6A7D800011AB76 /* FKLNewViewController.m in Sources */,
 				BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */,
 				BC74268A1D6B44D70011AB76 /* FKLADViewController.m in Sources */,
 				BC6897551D6BEACD004AAB53 /* FKLSubTagCell.m in Sources */,
 				BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */,
 				BC74266B1D6A87240011AB76 /* FKLTabBarController.m in Sources */,
+				BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */,
 				BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */,
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,
 				BC7426751D6AC3AC0011AB76 /* UIView+Frame.m in Sources */,
