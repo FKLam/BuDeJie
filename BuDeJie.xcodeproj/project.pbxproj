@@ -14,6 +14,13 @@
 		BC14CE951D6DF4A400B80298 /* FKLWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC14CE931D6DF4A400B80298 /* FKLWebViewController.xib */; };
 		BC14CE971D6DF64C00B80298 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC14CE961D6DF64C00B80298 /* WebKit.framework */; };
 		BC16A63B1D6E80C20005B505 /* FKLFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A63A1D6E80C20005B505 /* FKLFileTool.m */; };
+		BC16A63E1D6EA5BA0005B505 /* FKLTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A63D1D6EA5BA0005B505 /* FKLTitleButton.m */; };
+		BC16A6411D6EBACC0005B505 /* FKLAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A6401D6EBACC0005B505 /* FKLAllViewController.m */; };
+		BC16A6441D6EBADF0005B505 /* FKLPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A6431D6EBADF0005B505 /* FKLPictureViewController.m */; };
+		BC16A6471D6EBAF30005B505 /* FKLVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A6461D6EBAF30005B505 /* FKLVideoViewController.m */; };
+		BC16A64A1D6EBB040005B505 /* FKLVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A6491D6EBB040005B505 /* FKLVoiceViewController.m */; };
+		BC16A64D1D6EBB750005B505 /* FKLWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A64C1D6EBB750005B505 /* FKLWordViewController.m */; };
+		BC16A6501D6EC7BC0005B505 /* FKLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A64F1D6EC7BC0005B505 /* FKLConst.m */; };
 		BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A055C1D6D39670024305D /* FKLFastLoginView.m */; };
 		BC1A055F1D6D39750024305D /* FKLFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */; };
 		BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05611D6D3EEA0024305D /* FKLFastButton.m */; };
@@ -71,6 +78,20 @@
 		BC14CE961D6DF64C00B80298 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		BC16A6391D6E80C20005B505 /* FKLFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLFileTool.h; sourceTree = "<group>"; };
 		BC16A63A1D6E80C20005B505 /* FKLFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLFileTool.m; sourceTree = "<group>"; };
+		BC16A63C1D6EA5BA0005B505 /* FKLTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTitleButton.h; sourceTree = "<group>"; };
+		BC16A63D1D6EA5BA0005B505 /* FKLTitleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTitleButton.m; sourceTree = "<group>"; };
+		BC16A63F1D6EBACC0005B505 /* FKLAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLAllViewController.h; sourceTree = "<group>"; };
+		BC16A6401D6EBACC0005B505 /* FKLAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLAllViewController.m; sourceTree = "<group>"; };
+		BC16A6421D6EBADF0005B505 /* FKLPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLPictureViewController.h; sourceTree = "<group>"; };
+		BC16A6431D6EBADF0005B505 /* FKLPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLPictureViewController.m; sourceTree = "<group>"; };
+		BC16A6451D6EBAF30005B505 /* FKLVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLVideoViewController.h; sourceTree = "<group>"; };
+		BC16A6461D6EBAF30005B505 /* FKLVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLVideoViewController.m; sourceTree = "<group>"; };
+		BC16A6481D6EBB040005B505 /* FKLVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLVoiceViewController.h; sourceTree = "<group>"; };
+		BC16A6491D6EBB040005B505 /* FKLVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLVoiceViewController.m; sourceTree = "<group>"; };
+		BC16A64B1D6EBB750005B505 /* FKLWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLWordViewController.h; sourceTree = "<group>"; };
+		BC16A64C1D6EBB750005B505 /* FKLWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLWordViewController.m; sourceTree = "<group>"; };
+		BC16A64E1D6EC7BC0005B505 /* FKLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLConst.h; sourceTree = "<group>"; };
+		BC16A64F1D6EC7BC0005B505 /* FKLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLConst.m; sourceTree = "<group>"; };
 		BC1A055B1D6D39670024305D /* FKLFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLFastLoginView.h; sourceTree = "<group>"; };
 		BC1A055C1D6D39670024305D /* FKLFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLFastLoginView.m; sourceTree = "<group>"; };
 		BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLFastLoginView.xib; sourceTree = "<group>"; };
@@ -205,6 +226,16 @@
 			children = (
 				BC7426561D6A7CFF0011AB76 /* FKLEssenceViewController.h */,
 				BC7426571D6A7CFF0011AB76 /* FKLEssenceViewController.m */,
+				BC16A63F1D6EBACC0005B505 /* FKLAllViewController.h */,
+				BC16A6401D6EBACC0005B505 /* FKLAllViewController.m */,
+				BC16A6421D6EBADF0005B505 /* FKLPictureViewController.h */,
+				BC16A6431D6EBADF0005B505 /* FKLPictureViewController.m */,
+				BC16A6451D6EBAF30005B505 /* FKLVideoViewController.h */,
+				BC16A6461D6EBAF30005B505 /* FKLVideoViewController.m */,
+				BC16A6481D6EBB040005B505 /* FKLVoiceViewController.h */,
+				BC16A6491D6EBB040005B505 /* FKLVoiceViewController.m */,
+				BC16A64B1D6EBB750005B505 /* FKLWordViewController.h */,
+				BC16A64C1D6EBB750005B505 /* FKLWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +250,8 @@
 		BC7426411D6A7C880011AB76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC16A63C1D6EA5BA0005B505 /* FKLTitleButton.h */,
+				BC16A63D1D6EA5BA0005B505 /* FKLTitleButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -359,6 +392,8 @@
 				BC74264F1D6A7C880011AB76 /* AppDelegate.h */,
 				BC7426501D6A7C880011AB76 /* AppDelegate.m */,
 				BC7426761D6AC8250011AB76 /* BuDeJie.pch */,
+				BC16A64E1D6EC7BC0005B505 /* FKLConst.h */,
+				BC16A64F1D6EC7BC0005B505 /* FKLConst.m */,
 			);
 			path = "Other(其它)";
 			sourceTree = "<group>";
@@ -731,16 +766,21 @@
 				BC7426551D6A7C880011AB76 /* AppDelegate.m in Sources */,
 				BC7426641D6A7D8E0011AB76 /* FKLPublishViewController.m in Sources */,
 				BC74266F1D6A90F60011AB76 /* UIImage+Image.m in Sources */,
+				BC16A6411D6EBACC0005B505 /* FKLAllViewController.m in Sources */,
 				BC74265E1D6A7D420011AB76 /* FKLMeViewController.m in Sources */,
 				BC68975C1D6C2BDC004AAB53 /* FKLLoginRegisterViewController.m in Sources */,
 				BC74267C1D6AD7690011AB76 /* FKLNavigationController.m in Sources */,
 				BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */,
 				BC7426721D6AABF80011AB76 /* FKLTabBar.m in Sources */,
+				BC16A63E1D6EA5BA0005B505 /* FKLTitleButton.m in Sources */,
 				BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */,
+				BC16A6441D6EBADF0005B505 /* FKLPictureViewController.m in Sources */,
 				BC7426611D6A7D800011AB76 /* FKLNewViewController.m in Sources */,
 				BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */,
 				BC1A05681D6D54F70024305D /* UITextField+Placeholder.m in Sources */,
+				BC16A6501D6EC7BC0005B505 /* FKLConst.m in Sources */,
 				BC74268A1D6B44D70011AB76 /* FKLADViewController.m in Sources */,
+				BC16A6471D6EBAF30005B505 /* FKLVideoViewController.m in Sources */,
 				BC6897551D6BEACD004AAB53 /* FKLSubTagCell.m in Sources */,
 				BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */,
 				BC74266B1D6A87240011AB76 /* FKLTabBarController.m in Sources */,
@@ -751,6 +791,8 @@
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,
 				BC1A05651D6D4B5E0024305D /* FKLLoginField.m in Sources */,
 				BC14CE8C1D6DC17100B80298 /* FKLSquareCell.m in Sources */,
+				BC16A64D1D6EBB750005B505 /* FKLWordViewController.m in Sources */,
+				BC16A64A1D6EBB040005B505 /* FKLVoiceViewController.m in Sources */,
 				BC7426751D6AC3AC0011AB76 /* UIView+Frame.m in Sources */,
 				BC6897601D6C3393004AAB53 /* FKLLoginRegisterView.m in Sources */,
 				BC16A63B1D6E80C20005B505 /* FKLFileTool.m in Sources */,
