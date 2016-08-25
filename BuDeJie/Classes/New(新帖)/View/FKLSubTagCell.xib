@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FKLSubTagCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZgN-TJ-Z4z">
+                        <rect key="frame" x="6" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="0Im-Bb-Oan"/>
+                            <constraint firstAttribute="height" constant="60" id="Gmb-DI-TM8"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtX-Fl-oPF">
+                        <rect key="frame" x="76" y="10" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iaJ-Ho-Hcx">
+                        <rect key="frame" x="76" y="49" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKk-zN-Pxq">
+                        <rect key="frame" x="260" y="24" width="50" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="yFA-TR-Yyy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" title="+订阅" backgroundImage="tagButtonBG">
+                            <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="tagButtonBGClick"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QtX-Fl-oPF" firstAttribute="top" secondItem="ZgN-TJ-Z4z" secondAttribute="top" id="1dZ-SI-BOA"/>
+                    <constraint firstItem="iaJ-Ho-Hcx" firstAttribute="bottom" secondItem="ZgN-TJ-Z4z" secondAttribute="bottom" id="6sB-lm-daj"/>
+                    <constraint firstItem="ZgN-TJ-Z4z" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9kJ-HF-NYQ"/>
+                    <constraint firstItem="bKk-zN-Pxq" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="CY8-4A-5j3"/>
+                    <constraint firstItem="QtX-Fl-oPF" firstAttribute="leading" secondItem="ZgN-TJ-Z4z" secondAttribute="trailing" constant="10" id="Rrm-pL-mwu"/>
+                    <constraint firstItem="iaJ-Ho-Hcx" firstAttribute="leading" secondItem="ZgN-TJ-Z4z" secondAttribute="trailing" constant="10" id="cTE-O4-IwK"/>
+                    <constraint firstAttribute="trailing" secondItem="bKk-zN-Pxq" secondAttribute="trailing" constant="10" id="nRb-vb-kqa"/>
+                    <constraint firstItem="ZgN-TJ-Z4z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="xRD-Sv-zHq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="iconView" destination="ZgN-TJ-Z4z" id="C67-Am-prd"/>
+                <outlet property="nameLabel" destination="QtX-Fl-oPF" id="zKB-Ll-aM7"/>
+                <outlet property="numLabel" destination="iaJ-Ho-Hcx" id="Fp5-QK-qSK"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="tagButtonBG" width="80" height="31"/>
+        <image name="tagButtonBGClick" width="80" height="31"/>
+    </resources>
+</document>

@@ -1,0 +1,32 @@
+//
+//  BuDeJie.pch
+//  BuDeJie
+//
+//  Created by kun on 16/8/22.
+//  Copyright © 2016年 kun. All rights reserved.
+//
+
+#ifndef BuDeJie_pch
+#define BuDeJie_pch
+
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Item.h"
+
+#define FKLColor(r, g, b) [UIColor colorWithRed:(r) / 256.0 green:(g) / 256.0 blue:(b) / 256.0 alpha:1]
+
+/******************屏幕适配*********************/
+#define FKLScreenW ([UIScreen mainScreen].bounds.size.width)
+#define FKLScreenH ([UIScreen mainScreen].bounds.size.height)
+#define iPhone6p ( FKLScreenH == 736 )
+#define iPhone6 ( FKLScreenH == 667 )
+#define iPhone5 ( FKLScreenH == 568 )
+#define iPhone4 ( FKLScreenH == 480 )
+/******************屏幕适配*********************/
+
+#ifdef DEBUG // 调试
+#define FKLLog(...) NSLog(__VA_ARGS__)
+#else // 发布
+#define FKLog(...)
+#endif
+
+#endif /* BuDeJie_pch */
