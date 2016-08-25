@@ -67,7 +67,9 @@
     FKLFriendTrendViewController *friendVc = [[FKLFriendTrendViewController alloc] init];
     [self addChildVC:friendVc isHasNav:YES];
     
-    FKLMeViewController *meVc = [[FKLMeViewController alloc] init];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:NSStringFromClass([FKLMeViewController class]) bundle:nil];
+    // 加载箭头指向控制器
+    FKLMeViewController *meVc = [storyboard instantiateInitialViewController];
     [self addChildVC:meVc isHasNav:YES];
 }
 - (void)addChildVC:(UIViewController *)vc isHasNav:(BOOL)isHasNav
