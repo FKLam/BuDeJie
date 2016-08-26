@@ -11,3 +11,5 @@
 UIKIT_EXTERN CGFloat const FKLTabBarH;
 UIKIT_EXTERN CGFloat const FKLNaviMaxY;
 UIKIT_EXTERN CGFloat const FKLTitleViewH;
+UIKIT_EXTERN NSString * const FKLTabBarButtonDidRepeatClickNotification;
+UIKIT_EXTERN NSString * const FKLTitleButtonDidRepeatClickNotification;

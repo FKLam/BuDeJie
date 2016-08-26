@@ -14,8 +14,9 @@
 #import "FKLVoiceViewController.h"
 #import "FKLWordViewController.h"
 
-@interface FKLEssenceViewController ()
+@interface FKLEssenceViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIView *titlesView;
+@property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) FKLTitleButton *previousSelectedButton;
 @property (nonatomic, strong) UIView *underLine;
 @end
@@ -52,27 +53,10 @@
 }
 - (void)setupScrollView
 {
-    UIScrollView *scrollView = [[UIScrollView alloc] init];
-    scrollView.backgroundColor = [UIColor blueColor];
-    scrollView.frame = self.view.bounds;
-    scrollView.showsHorizontalScrollIndicator = NO;
-    scrollView.pagingEnabled = YES;
-    [self.view addSubview:scrollView];
-    
-    CGFloat x = 0;
-    CGFloat y = 0;
-    CGFloat w = scrollView.fkl_width;
-    CGFloat h = scrollView.fkl_height;
+    [self.view addSubview:self.scrollView];
+    CGFloat w = self.scrollView.fkl_width;
     NSUInteger count = self.childViewControllers.count;
-    for ( NSInteger index = 0; index < count; index++ )
-    {
-        UIView *tableView = self.childViewControllers[index].view;
-        x = w * index;
-        tableView.frame = CGRectMake(x, y, w, h);
-        tableView.backgroundColor = FKLRandomColor;
-        [scrollView addSubview:tableView];
-    }
-    scrollView.contentSize = CGSizeMake(5 * w, 0);
+    self.scrollView.contentSize = CGSizeMake(count * w, 0);
 }
 - (void)setupTitlesView
 {
@@ -113,7 +97,10 @@
 - (void)titleButtonClick:(FKLTitleButton *)sender
 {
     if ( sender == self.previousSelectedButton )
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:FKLTitleButtonDidRepeatClickNotification object:nil];
         return;
+    }
     NSTimeInterval duration = 0;
     if ( self.previousSelectedButton )
     {
@@ -127,9 +114,62 @@
         weakSelf.underLine.fkl_width = [sender.currentTitle sizeWithAttributes:@{NSFontAttributeName : sender.titleLabel.font}].width + 10;
 //        weakSelf.underLine.fkl_width = sender.titleLabel.fkl_width;
         weakSelf.underLine.fkl_centerX = sender.fkl_centerX;
+        weakSelf.scrollView.contentOffset = CGPointMake(sender.tag * weakSelf.scrollView.fkl_width, weakSelf.scrollView.contentOffset.y);
+    } completion:^(BOOL finished) {
+        // 添加子控制器的view
+        [weakSelf addChildVcViewIntoScrollView:sender.tag];
     }];
+    // 设置index位置对应的tableView.scrollToTop ＝ YES，其它都设置为NO
+    for ( NSUInteger index = 0; index < self.childViewControllers.count; index++ )
+    {
+        UIViewController *childVC = self.childViewControllers[index];
+        if ( !childVC.isViewLoaded )
+            continue;
+        UIScrollView *scrollView = (UIScrollView *)childVC.view;
+        if ( ![scrollView isKindOfClass:[UIScrollView class]] )
+            continue;
+        scrollView.scrollsToTop = ( sender.tag == index );
+    }
+}
+#pragma mark - 其它
+- (void)addChildVcViewIntoScrollView:(NSInteger)index
+{
+    UIView *childView = self.childViewControllers[index].view;
+    if ( childView.superview )
+        return;
+    CGFloat scrollViewW = self.scrollView.fkl_width;
+    childView.frame = CGRectMake(index * scrollViewW, 0, scrollViewW, self.scrollView.fkl_height);
+    [self.scrollView addSubview:childView];
+}
+#pragma mark - UIScrollViewDelegate
+/**
+ *  用户松开手，速度减为 0 时就调用
+ *
+ */
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    NSInteger index = scrollView.contentOffset.x / scrollView.fkl_width;
+    FKLTitleButton *titleButton = self.titlesView.subviews[index];
+    // 递归查找，包括本身自己
+//    FKLTitleButton *titleButton = [self.titlesView viewWithTag:index];
+    [self titleButtonClick:titleButton];
 }
 #pragma mark - getter methods
+- (UIScrollView *)scrollView
+{
+    if ( nil == _scrollView )
+    {
+        _scrollView = [[UIScrollView alloc] init];
+        _scrollView.backgroundColor = [UIColor blueColor];
+        _scrollView.frame = self.view.bounds;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
+        _scrollView.pagingEnabled = YES;
+        _scrollView.delegate = self;
+        _scrollView.scrollsToTop = NO;
+    }
+    return _scrollView;
+}
 - (UIView *)titlesView
 {
     if ( nil == _titlesView )
