@@ -99,8 +99,12 @@
     if ( sender == self.previousSelectedButton )
     {
         [[NSNotificationCenter defaultCenter] postNotificationName:FKLTitleButtonDidRepeatClickNotification object:nil];
-        return;
+//        return;
     }
+    [self dealTitleButtonClick:sender];
+}
+- (void)dealTitleButtonClick:(FKLTitleButton *)sender
+{
     NSTimeInterval duration = 0;
     if ( self.previousSelectedButton )
     {
@@ -112,7 +116,6 @@
     __weak typeof( self ) weakSelf = self;
     [UIView animateWithDuration:duration animations:^{
         weakSelf.underLine.fkl_width = [sender.currentTitle sizeWithAttributes:@{NSFontAttributeName : sender.titleLabel.font}].width + 10;
-//        weakSelf.underLine.fkl_width = sender.titleLabel.fkl_width;
         weakSelf.underLine.fkl_centerX = sender.fkl_centerX;
         weakSelf.scrollView.contentOffset = CGPointMake(sender.tag * weakSelf.scrollView.fkl_width, weakSelf.scrollView.contentOffset.y);
     } completion:^(BOOL finished) {
@@ -152,7 +155,7 @@
     FKLTitleButton *titleButton = self.titlesView.subviews[index];
     // 递归查找，包括本身自己
 //    FKLTitleButton *titleButton = [self.titlesView viewWithTag:index];
-    [self titleButtonClick:titleButton];
+    [self dealTitleButtonClick:titleButton];
 }
 #pragma mark - getter methods
 - (UIScrollView *)scrollView

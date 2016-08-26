@@ -21,12 +21,18 @@
 		BC16A64A1D6EBB040005B505 /* FKLVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A6491D6EBB040005B505 /* FKLVoiceViewController.m */; };
 		BC16A64D1D6EBB750005B505 /* FKLWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A64C1D6EBB750005B505 /* FKLWordViewController.m */; };
 		BC16A6501D6EC7BC0005B505 /* FKLConst.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A64F1D6EC7BC0005B505 /* FKLConst.m */; };
+		BC1781261D6FFDEA005B2E71 /* FKLTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1781251D6FFDEA005B2E71 /* FKLTopic.m */; };
 		BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A055C1D6D39670024305D /* FKLFastLoginView.m */; };
 		BC1A055F1D6D39750024305D /* FKLFastLoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */; };
 		BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05611D6D3EEA0024305D /* FKLFastButton.m */; };
 		BC1A05651D6D4B5E0024305D /* FKLLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05641D6D4B5E0024305D /* FKLLoginField.m */; };
 		BC1A05681D6D54F70024305D /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05671D6D54F70024305D /* UITextField+Placeholder.m */; };
 		BC1A056A1D6D67FC0024305D /* FKLMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A05691D6D67FC0024305D /* FKLMeViewController.storyboard */; };
+		BC2307EF1D702C680045843C /* FKLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307EE1D702C680045843C /* FKLTopicCell.m */; };
+		BC2307F21D7036150045843C /* FKLVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307F11D7036150045843C /* FKLVideoCell.m */; };
+		BC2307F51D70362D0045843C /* FKLVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307F41D70362D0045843C /* FKLVoiceCell.m */; };
+		BC2307F81D7036380045843C /* FKLPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307F71D7036380045843C /* FKLPictureCell.m */; };
+		BC2307FB1D7036420045843C /* FKLWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307FA1D7036420045843C /* FKLWordCell.m */; };
 		BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */; };
 		BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */; };
 		BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */; };
@@ -92,6 +98,8 @@
 		BC16A64C1D6EBB750005B505 /* FKLWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLWordViewController.m; sourceTree = "<group>"; };
 		BC16A64E1D6EC7BC0005B505 /* FKLConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLConst.h; sourceTree = "<group>"; };
 		BC16A64F1D6EC7BC0005B505 /* FKLConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLConst.m; sourceTree = "<group>"; };
+		BC1781241D6FFDEA005B2E71 /* FKLTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopic.h; sourceTree = "<group>"; };
+		BC1781251D6FFDEA005B2E71 /* FKLTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopic.m; sourceTree = "<group>"; };
 		BC1A055B1D6D39670024305D /* FKLFastLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLFastLoginView.h; sourceTree = "<group>"; };
 		BC1A055C1D6D39670024305D /* FKLFastLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLFastLoginView.m; sourceTree = "<group>"; };
 		BC1A055E1D6D39750024305D /* FKLFastLoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLFastLoginView.xib; sourceTree = "<group>"; };
@@ -102,6 +110,16 @@
 		BC1A05661D6D54F70024305D /* UITextField+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
 		BC1A05671D6D54F70024305D /* UITextField+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
 		BC1A05691D6D67FC0024305D /* FKLMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FKLMeViewController.storyboard; sourceTree = "<group>"; };
+		BC2307ED1D702C680045843C /* FKLTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopicCell.h; sourceTree = "<group>"; };
+		BC2307EE1D702C680045843C /* FKLTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopicCell.m; sourceTree = "<group>"; };
+		BC2307F01D7036150045843C /* FKLVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLVideoCell.h; sourceTree = "<group>"; };
+		BC2307F11D7036150045843C /* FKLVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLVideoCell.m; sourceTree = "<group>"; };
+		BC2307F31D70362D0045843C /* FKLVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLVoiceCell.h; sourceTree = "<group>"; };
+		BC2307F41D70362D0045843C /* FKLVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLVoiceCell.m; sourceTree = "<group>"; };
+		BC2307F61D7036380045843C /* FKLPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLPictureCell.h; sourceTree = "<group>"; };
+		BC2307F71D7036380045843C /* FKLPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLPictureCell.m; sourceTree = "<group>"; };
+		BC2307F91D7036420045843C /* FKLWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLWordCell.h; sourceTree = "<group>"; };
+		BC2307FA1D7036420045843C /* FKLWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLWordCell.m; sourceTree = "<group>"; };
 		BC6897491D6BD2AF004AAB53 /* FKLADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLADItem.h; sourceTree = "<group>"; };
 		BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLADItem.m; sourceTree = "<group>"; };
 		BC68974C1D6BE3F4004AAB53 /* FKLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagViewController.h; sourceTree = "<group>"; };
@@ -243,6 +261,18 @@
 		BC7426401D6A7C880011AB76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BC1781241D6FFDEA005B2E71 /* FKLTopic.h */,
+				BC1781251D6FFDEA005B2E71 /* FKLTopic.m */,
+				BC2307ED1D702C680045843C /* FKLTopicCell.h */,
+				BC2307EE1D702C680045843C /* FKLTopicCell.m */,
+				BC2307F01D7036150045843C /* FKLVideoCell.h */,
+				BC2307F11D7036150045843C /* FKLVideoCell.m */,
+				BC2307F31D70362D0045843C /* FKLVoiceCell.h */,
+				BC2307F41D70362D0045843C /* FKLVoiceCell.m */,
+				BC2307F61D7036380045843C /* FKLPictureCell.h */,
+				BC2307F71D7036380045843C /* FKLPictureCell.m */,
+				BC2307F91D7036420045843C /* FKLWordCell.h */,
+				BC2307FA1D7036420045843C /* FKLWordCell.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -780,7 +810,9 @@
 				BC1A05681D6D54F70024305D /* UITextField+Placeholder.m in Sources */,
 				BC16A6501D6EC7BC0005B505 /* FKLConst.m in Sources */,
 				BC74268A1D6B44D70011AB76 /* FKLADViewController.m in Sources */,
+				BC2307FB1D7036420045843C /* FKLWordCell.m in Sources */,
 				BC16A6471D6EBAF30005B505 /* FKLVideoViewController.m in Sources */,
+				BC2307F51D70362D0045843C /* FKLVoiceCell.m in Sources */,
 				BC6897551D6BEACD004AAB53 /* FKLSubTagCell.m in Sources */,
 				BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */,
 				BC74266B1D6A87240011AB76 /* FKLTabBarController.m in Sources */,
@@ -789,12 +821,16 @@
 				BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */,
 				BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */,
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,
+				BC1781261D6FFDEA005B2E71 /* FKLTopic.m in Sources */,
 				BC1A05651D6D4B5E0024305D /* FKLLoginField.m in Sources */,
 				BC14CE8C1D6DC17100B80298 /* FKLSquareCell.m in Sources */,
 				BC16A64D1D6EBB750005B505 /* FKLWordViewController.m in Sources */,
 				BC16A64A1D6EBB040005B505 /* FKLVoiceViewController.m in Sources */,
+				BC2307F21D7036150045843C /* FKLVideoCell.m in Sources */,
 				BC7426751D6AC3AC0011AB76 /* UIView+Frame.m in Sources */,
 				BC6897601D6C3393004AAB53 /* FKLLoginRegisterView.m in Sources */,
+				BC2307EF1D702C680045843C /* FKLTopicCell.m in Sources */,
+				BC2307F81D7036380045843C /* FKLPictureCell.m in Sources */,
 				BC16A63B1D6E80C20005B505 /* FKLFileTool.m in Sources */,
 				BC7426831D6AD97F0011AB76 /* FKLSettingViewController.m in Sources */,
 			);
