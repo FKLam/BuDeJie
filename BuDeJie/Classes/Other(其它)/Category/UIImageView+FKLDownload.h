@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UIImageView+WebCache.h>
 
 @interface UIImageView (FKLDownload)
-- (void)fkl_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholderImage:(UIImage *)placeholderImage;
+- (void)fkl_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholderImage:(UIImage *)placeholderImage completed:(SDWebImageCompletionBlock)completedBlock;
 - (void)fkl_setCircleHeader:(NSString *)headerURL;
 @end

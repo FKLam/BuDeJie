@@ -7,12 +7,11 @@
 //
 
 #import "UIImageView+FKLDownload.h"
-#import <UIImageView+WebCache.h>
 #import <AFNetworking.h>
 #import "UIImage+Image.h"
 
 @implementation UIImageView (FKLDownload)
-- (void)fkl_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholderImage:(UIImage *)placeholderImage
+- (void)fkl_setOriginImage:(NSString *)originImageURL thumbnailImage:(NSString *)thumbnailImageURL placeholderImage:(UIImage *)placeholderImage completed:(SDWebImageCompletionBlock)completedBlock
 {
     // 根据网络状态来加载图片
     AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
@@ -22,16 +21,17 @@
     if ( cacheImage1 )
     {
         self.image = cacheImage1;
+        completedBlock(cacheImage1, nil, 0, [NSURL URLWithString:originImageURL]);
     }
     else
     {
         if ( mgr.isReachableViaWiFi )
         {
-            [self sd_setImageWithURL:[NSURL URLWithString:originImageURL]];
+            [self sd_setImageWithURL:[NSURL URLWithString:originImageURL] completed:completedBlock];
         }
         else if ( mgr.isReachableViaWWAN )
         {
-            [self sd_setImageWithURL:[NSURL URLWithString:thumbnailImageURL]];
+            [self sd_setImageWithURL:[NSURL URLWithString:thumbnailImageURL] completed:completedBlock];
         }
         else
         {
@@ -40,6 +40,7 @@
             if ( cacheThumbnailImage )
             {
                 self.image = cacheThumbnailImage;
+                completedBlock( cacheThumbnailImage, nil, 0, [NSURL URLWithString:thumbnailImageURL]);
             }
             else
                 self.image = placeholderImage; // 占位图

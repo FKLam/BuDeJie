@@ -157,6 +157,10 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
     }
 }
 #pragma mark - 数据处理
+- (FKLTopicType)type
+{
+    return FKLTopicTypeVideo;
+}
 /**
  *  发送请求给服务器，下拉刷新数据
  */
@@ -169,7 +173,7 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"31";
+    parameters[@"type"] = @([self type]);
     // 发送请求
     [self.manager GET:FKLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
@@ -198,7 +202,7 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"31";
+    parameters[@"type"] = @([self type]);
     parameters[@"maxtime"] = self.maxtime;
     // 发送请求
     [self.manager GET:FKLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

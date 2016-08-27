@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *voicetimeLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *placeholderImage;
 
 @end
 
@@ -28,7 +29,11 @@
     _topic = topic;
     
     // 设置图片
-    [self.imageView fkl_setOriginImage:topic.image1 thumbnailImage:topic.image0 placeholderImage:nil];
+    self.placeholderImage.hidden = NO;
+    [self.imageView fkl_setOriginImage:topic.image1 thumbnailImage:topic.image0 placeholderImage:nil completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
+        if ( !image ) return;
+        self.placeholderImage.hidden = YES;
+    }];
     
     if ( 10000 <= topic.playcount )
     {
