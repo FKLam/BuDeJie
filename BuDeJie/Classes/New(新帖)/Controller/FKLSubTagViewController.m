@@ -52,7 +52,7 @@ static NSString * const ID = @"cell";
     __weak typeof( self ) weakSelf = self;
     // 发送请求
     [SVProgressHUD showWithStatus:@"正在加载ing..."];
-    [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject) {
+    [mgr GET:FKLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSArray * _Nullable responseObject) {
         
         NSArray *tempArray = [FKLSubTagItem mj_objectArrayWithKeyValuesArray:responseObject];
         [weakSelf.subTags addObjectsFromArray:tempArray];

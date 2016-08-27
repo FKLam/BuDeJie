@@ -10,6 +10,7 @@
 
 @interface FKLTabBar ()
 @property (nonatomic, strong) UIButton *publishBtn;
+@property (nonatomic, strong) UIControl *previousSelectedControl;
 @end
 
 @implementation FKLTabBar
@@ -23,10 +24,12 @@
     CGFloat x = 0;
     NSInteger index = 0;
     // 遍历子控件，调整布局
-    for ( UIView *tabBarButton in self.subviews )
+    for ( UIControl *tabBarButton in self.subviews )
     {
         if ( [tabBarButton isKindOfClass:NSClassFromString(@"UITabBarButton")] )
         {
+            if ( 0 == index && nil == self.previousSelectedControl )
+                self.previousSelectedControl = tabBarButton;
             if ( index == 2 )
             {
                 index++;
@@ -34,10 +37,21 @@
             x = index * btnW;
             tabBarButton.frame = CGRectMake(x, 0, btnW, btnH);
             index++;
+            [tabBarButton addTarget:self action:@selector(clickTabBarButton:) forControlEvents:UIControlEventTouchUpInside];
         }
     }
     // 调整发布按钮位置
     self.publishBtn.center = CGPointMake(self.fkl_width * 0.5, self.fkl_height * 0.5 );
+}
+#pragma mark - 监听tabBarButton的点击
+- (void)clickTabBarButton:(UIControl *)sender
+{
+    if ( sender == self.previousSelectedControl )
+    {
+        [[NSNotificationCenter defaultCenter] postNotificationName:FKLTabBarButtonDidRepeatClickNotification object:nil];
+        return;
+    }
+    self.previousSelectedControl = sender;
 }
 #pragma mark - getter methods
 - (UIButton *)publishBtn

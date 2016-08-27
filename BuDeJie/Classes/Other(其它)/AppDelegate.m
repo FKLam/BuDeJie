@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FKLADViewController.h"
-
+#import <AFNetworking.h>
 // 每次程序启动的时候进入广告界面
 /*
  1，在启动的时候，去加个广告界面
@@ -32,6 +32,8 @@
     self.window.rootViewController = adVc;
     // 显示窗口，成为主窗口
     [self.window makeKeyAndVisible];
+    // 监听网络状态
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
     return YES;
 }
 

@@ -101,7 +101,7 @@ static CGFloat const margin = 1.0;
     parmaters[@"c"] = @"topic";
     __weak typeof( self ) weakSelf = self;
     // 发送请求
-    [mgr GET:@"http://api.budejie.com/api/api_open.php" parameters:parmaters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
+    [mgr GET:FKLCommonURL parameters:parmaters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary * _Nullable responseObject) {
         // name url icon
         NSArray *dictArr = responseObject[@"square_list"];
         NSArray *squareItems = [FKLSquareItem mj_objectArrayWithKeyValuesArray:dictArr];
