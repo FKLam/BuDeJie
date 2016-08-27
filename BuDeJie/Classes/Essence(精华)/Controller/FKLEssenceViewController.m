@@ -14,6 +14,11 @@
 #import "FKLVoiceViewController.h"
 #import "FKLWordViewController.h"
 
+/*
+ ［［FKLVideoViewController alloc］init］
+ 1，FKLVideoViewController.xib
+ 2，FKLVideoView.xib
+ */
 @interface FKLEssenceViewController ()<UIScrollViewDelegate>
 @property (nonatomic, strong) UIView *titlesView;
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -46,9 +51,9 @@
 - (void)setupAllChildVCs
 {
     [self addChildViewController:[[FKLAllViewController alloc] init]];
-    [self addChildViewController:[[FKLPictureViewController alloc] init]];
     [self addChildViewController:[[FKLVideoViewController alloc] init]];
     [self addChildViewController:[[FKLVoiceViewController alloc] init]];
+    [self addChildViewController:[[FKLPictureViewController alloc] init]];
     [self addChildViewController:[[FKLWordViewController alloc] init]];
 }
 - (void)setupScrollView

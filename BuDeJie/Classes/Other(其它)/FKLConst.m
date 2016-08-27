@@ -15,4 +15,5 @@ NSString * const FKLTabBarButtonDidRepeatClickNotification = @"FKLTabBarButtonDi
 NSString * const FKLTitleButtonDidRepeatClickNotification = @"FKLTitleButtonDidRepeatClickNotification";
 /** 统一的请求路径 */
 NSString * const FKLCommonURL = @"http://api.budejie.com/api/api_open.php";
+CGFloat const FKLMargin = 10.0;
 

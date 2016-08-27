@@ -10,4 +10,8 @@
 
 @interface UIImage (Image)
 + (instancetype)iamgeOriginalWithName:(NSString *)imageName;
+
+- (instancetype)fkl_circleImage;
+
++ (instancetype)fkl_circleImageName:(NSString *)name;
 @end

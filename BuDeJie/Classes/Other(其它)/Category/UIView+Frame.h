@@ -16,4 +16,7 @@
 @property (nonatomic, assign) CGFloat fkl_y;
 @property (nonatomic, assign) CGFloat fkl_centerX;
 @property (nonatomic, assign) CGFloat fkl_centerY;
+
+/** 根据类名创建由 xib 生成的 View */
++ (instancetype)fkl_viewFromXib;
 @end

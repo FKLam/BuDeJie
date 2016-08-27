@@ -13,6 +13,14 @@
 		BC14CE941D6DF4A400B80298 /* FKLWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC14CE921D6DF4A400B80298 /* FKLWebViewController.m */; };
 		BC14CE951D6DF4A400B80298 /* FKLWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC14CE931D6DF4A400B80298 /* FKLWebViewController.xib */; };
 		BC14CE971D6DF64C00B80298 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC14CE961D6DF64C00B80298 /* WebKit.framework */; };
+		BC1643BE1D712D5000320F68 /* FKLTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1643BD1D712D5000320F68 /* FKLTopicVideoView.m */; };
+		BC1643C01D712D6100320F68 /* FKLTopicVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1643BF1D712D6100320F68 /* FKLTopicVideoView.xib */; };
+		BC1643C31D71315E00320F68 /* FKLTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1643C21D71315E00320F68 /* FKLTopicVoiceView.m */; };
+		BC1643C61D71317100320F68 /* FKLTopicPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1643C51D71317100320F68 /* FKLTopicPictureView.m */; };
+		BC1643C81D71318700320F68 /* FKLTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1643C71D71318700320F68 /* FKLTopicVoiceView.xib */; };
+		BC1643CA1D71319700320F68 /* FKLTopicPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1643C91D71319700320F68 /* FKLTopicPictureView.xib */; };
+		BC1643CE1D71327700320F68 /* FKLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1643CC1D71327700320F68 /* FKLTopicCell.m */; };
+		BC1643CF1D71327700320F68 /* FKLTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1643CD1D71327700320F68 /* FKLTopicCell.xib */; };
 		BC16A63B1D6E80C20005B505 /* FKLFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A63A1D6E80C20005B505 /* FKLFileTool.m */; };
 		BC16A63E1D6EA5BA0005B505 /* FKLTitleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A63D1D6EA5BA0005B505 /* FKLTitleButton.m */; };
 		BC16A6411D6EBACC0005B505 /* FKLAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC16A6401D6EBACC0005B505 /* FKLAllViewController.m */; };
@@ -28,11 +36,6 @@
 		BC1A05651D6D4B5E0024305D /* FKLLoginField.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05641D6D4B5E0024305D /* FKLLoginField.m */; };
 		BC1A05681D6D54F70024305D /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05671D6D54F70024305D /* UITextField+Placeholder.m */; };
 		BC1A056A1D6D67FC0024305D /* FKLMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A05691D6D67FC0024305D /* FKLMeViewController.storyboard */; };
-		BC2307EF1D702C680045843C /* FKLTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307EE1D702C680045843C /* FKLTopicCell.m */; };
-		BC2307F21D7036150045843C /* FKLVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307F11D7036150045843C /* FKLVideoCell.m */; };
-		BC2307F51D70362D0045843C /* FKLVoiceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307F41D70362D0045843C /* FKLVoiceCell.m */; };
-		BC2307F81D7036380045843C /* FKLPictureCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307F71D7036380045843C /* FKLPictureCell.m */; };
-		BC2307FB1D7036420045843C /* FKLWordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC2307FA1D7036420045843C /* FKLWordCell.m */; };
 		BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */; };
 		BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */; };
 		BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */; };
@@ -82,6 +85,18 @@
 		BC14CE921D6DF4A400B80298 /* FKLWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLWebViewController.m; sourceTree = "<group>"; };
 		BC14CE931D6DF4A400B80298 /* FKLWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLWebViewController.xib; sourceTree = "<group>"; };
 		BC14CE961D6DF64C00B80298 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		BC1643BC1D712D5000320F68 /* FKLTopicVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopicVideoView.h; sourceTree = "<group>"; };
+		BC1643BD1D712D5000320F68 /* FKLTopicVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopicVideoView.m; sourceTree = "<group>"; };
+		BC1643BF1D712D6100320F68 /* FKLTopicVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLTopicVideoView.xib; sourceTree = "<group>"; };
+		BC1643C11D71315E00320F68 /* FKLTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopicVoiceView.h; sourceTree = "<group>"; };
+		BC1643C21D71315E00320F68 /* FKLTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopicVoiceView.m; sourceTree = "<group>"; };
+		BC1643C41D71317100320F68 /* FKLTopicPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopicPictureView.h; sourceTree = "<group>"; };
+		BC1643C51D71317100320F68 /* FKLTopicPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopicPictureView.m; sourceTree = "<group>"; };
+		BC1643C71D71318700320F68 /* FKLTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLTopicVoiceView.xib; sourceTree = "<group>"; };
+		BC1643C91D71319700320F68 /* FKLTopicPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLTopicPictureView.xib; sourceTree = "<group>"; };
+		BC1643CB1D71327700320F68 /* FKLTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopicCell.h; sourceTree = "<group>"; };
+		BC1643CC1D71327700320F68 /* FKLTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopicCell.m; sourceTree = "<group>"; };
+		BC1643CD1D71327700320F68 /* FKLTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLTopicCell.xib; sourceTree = "<group>"; };
 		BC16A6391D6E80C20005B505 /* FKLFileTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLFileTool.h; sourceTree = "<group>"; };
 		BC16A63A1D6E80C20005B505 /* FKLFileTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLFileTool.m; sourceTree = "<group>"; };
 		BC16A63C1D6EA5BA0005B505 /* FKLTitleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTitleButton.h; sourceTree = "<group>"; };
@@ -110,16 +125,6 @@
 		BC1A05661D6D54F70024305D /* UITextField+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Placeholder.h"; sourceTree = "<group>"; };
 		BC1A05671D6D54F70024305D /* UITextField+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Placeholder.m"; sourceTree = "<group>"; };
 		BC1A05691D6D67FC0024305D /* FKLMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FKLMeViewController.storyboard; sourceTree = "<group>"; };
-		BC2307ED1D702C680045843C /* FKLTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopicCell.h; sourceTree = "<group>"; };
-		BC2307EE1D702C680045843C /* FKLTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopicCell.m; sourceTree = "<group>"; };
-		BC2307F01D7036150045843C /* FKLVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLVideoCell.h; sourceTree = "<group>"; };
-		BC2307F11D7036150045843C /* FKLVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLVideoCell.m; sourceTree = "<group>"; };
-		BC2307F31D70362D0045843C /* FKLVoiceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLVoiceCell.h; sourceTree = "<group>"; };
-		BC2307F41D70362D0045843C /* FKLVoiceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLVoiceCell.m; sourceTree = "<group>"; };
-		BC2307F61D7036380045843C /* FKLPictureCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLPictureCell.h; sourceTree = "<group>"; };
-		BC2307F71D7036380045843C /* FKLPictureCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLPictureCell.m; sourceTree = "<group>"; };
-		BC2307F91D7036420045843C /* FKLWordCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLWordCell.h; sourceTree = "<group>"; };
-		BC2307FA1D7036420045843C /* FKLWordCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLWordCell.m; sourceTree = "<group>"; };
 		BC6897491D6BD2AF004AAB53 /* FKLADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLADItem.h; sourceTree = "<group>"; };
 		BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLADItem.m; sourceTree = "<group>"; };
 		BC68974C1D6BE3F4004AAB53 /* FKLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagViewController.h; sourceTree = "<group>"; };
@@ -263,16 +268,6 @@
 			children = (
 				BC1781241D6FFDEA005B2E71 /* FKLTopic.h */,
 				BC1781251D6FFDEA005B2E71 /* FKLTopic.m */,
-				BC2307ED1D702C680045843C /* FKLTopicCell.h */,
-				BC2307EE1D702C680045843C /* FKLTopicCell.m */,
-				BC2307F01D7036150045843C /* FKLVideoCell.h */,
-				BC2307F11D7036150045843C /* FKLVideoCell.m */,
-				BC2307F31D70362D0045843C /* FKLVoiceCell.h */,
-				BC2307F41D70362D0045843C /* FKLVoiceCell.m */,
-				BC2307F61D7036380045843C /* FKLPictureCell.h */,
-				BC2307F71D7036380045843C /* FKLPictureCell.m */,
-				BC2307F91D7036420045843C /* FKLWordCell.h */,
-				BC2307FA1D7036420045843C /* FKLWordCell.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,8 +275,20 @@
 		BC7426411D6A7C880011AB76 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BC1643CB1D71327700320F68 /* FKLTopicCell.h */,
+				BC1643CC1D71327700320F68 /* FKLTopicCell.m */,
+				BC1643CD1D71327700320F68 /* FKLTopicCell.xib */,
 				BC16A63C1D6EA5BA0005B505 /* FKLTitleButton.h */,
 				BC16A63D1D6EA5BA0005B505 /* FKLTitleButton.m */,
+				BC1643BC1D712D5000320F68 /* FKLTopicVideoView.h */,
+				BC1643BD1D712D5000320F68 /* FKLTopicVideoView.m */,
+				BC1643BF1D712D6100320F68 /* FKLTopicVideoView.xib */,
+				BC1643C11D71315E00320F68 /* FKLTopicVoiceView.h */,
+				BC1643C21D71315E00320F68 /* FKLTopicVoiceView.m */,
+				BC1643C71D71318700320F68 /* FKLTopicVoiceView.xib */,
+				BC1643C41D71317100320F68 /* FKLTopicPictureView.h */,
+				BC1643C51D71317100320F68 /* FKLTopicPictureView.m */,
+				BC1643C91D71319700320F68 /* FKLTopicPictureView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -715,13 +722,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC1643C01D712D6100320F68 /* FKLTopicVideoView.xib in Resources */,
+				BC1643CF1D71327700320F68 /* FKLTopicCell.xib in Resources */,
 				BC1A055F1D6D39750024305D /* FKLFastLoginView.xib in Resources */,
 				BC6897581D6C26C6004AAB53 /* FKLFriendTrendViewController.xib in Resources */,
 				BCC3D2E01D6A01FC0036A834 /* LaunchScreen.storyboard in Resources */,
 				BC1A056A1D6D67FC0024305D /* FKLMeViewController.storyboard in Resources */,
+				BC1643CA1D71319700320F68 /* FKLTopicPictureView.xib in Resources */,
 				BC7426961D6B52910011AB76 /* LaunchImage-700-568h@2x.png in Resources */,
 				BC74269A1D6B52910011AB76 /* LaunchImage.png in Resources */,
 				BCC3D2DD1D6A01FC0036A834 /* Assets.xcassets in Resources */,
+				BC1643C81D71318700320F68 /* FKLTopicVoiceView.xib in Resources */,
 				BC7426971D6B52910011AB76 /* LaunchImage-700@2x.png in Resources */,
 				BC14CE8D1D6DC17100B80298 /* FKLSquareCell.xib in Resources */,
 				BC7426991D6B52910011AB76 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
@@ -794,6 +805,7 @@
 				BC7426581D6A7CFF0011AB76 /* FKLEssenceViewController.m in Sources */,
 				BC7426791D6ACE140011AB76 /* UIBarButtonItem+Item.m in Sources */,
 				BC7426551D6A7C880011AB76 /* AppDelegate.m in Sources */,
+				BC1643CE1D71327700320F68 /* FKLTopicCell.m in Sources */,
 				BC7426641D6A7D8E0011AB76 /* FKLPublishViewController.m in Sources */,
 				BC74266F1D6A90F60011AB76 /* UIImage+Image.m in Sources */,
 				BC16A6411D6EBACC0005B505 /* FKLAllViewController.m in Sources */,
@@ -804,21 +816,22 @@
 				BC7426721D6AABF80011AB76 /* FKLTabBar.m in Sources */,
 				BC16A63E1D6EA5BA0005B505 /* FKLTitleButton.m in Sources */,
 				BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */,
+				BC1643C61D71317100320F68 /* FKLTopicPictureView.m in Sources */,
 				BC16A6441D6EBADF0005B505 /* FKLPictureViewController.m in Sources */,
 				BC7426611D6A7D800011AB76 /* FKLNewViewController.m in Sources */,
+				BC1643BE1D712D5000320F68 /* FKLTopicVideoView.m in Sources */,
 				BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */,
 				BC1A05681D6D54F70024305D /* UITextField+Placeholder.m in Sources */,
 				BC16A6501D6EC7BC0005B505 /* FKLConst.m in Sources */,
 				BC74268A1D6B44D70011AB76 /* FKLADViewController.m in Sources */,
-				BC2307FB1D7036420045843C /* FKLWordCell.m in Sources */,
 				BC16A6471D6EBAF30005B505 /* FKLVideoViewController.m in Sources */,
-				BC2307F51D70362D0045843C /* FKLVoiceCell.m in Sources */,
 				BC6897551D6BEACD004AAB53 /* FKLSubTagCell.m in Sources */,
 				BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */,
 				BC74266B1D6A87240011AB76 /* FKLTabBarController.m in Sources */,
 				BC14CE901D6DD9A900B80298 /* FKLSquareItem.m in Sources */,
 				BC14CE941D6DF4A400B80298 /* FKLWebViewController.m in Sources */,
 				BC1A05621D6D3EEA0024305D /* FKLFastButton.m in Sources */,
+				BC1643C31D71315E00320F68 /* FKLTopicVoiceView.m in Sources */,
 				BC74265B1D6A7D1E0011AB76 /* FKLFriendTrendViewController.m in Sources */,
 				BCC3D2D21D6A01FC0036A834 /* main.m in Sources */,
 				BC1781261D6FFDEA005B2E71 /* FKLTopic.m in Sources */,
@@ -826,11 +839,8 @@
 				BC14CE8C1D6DC17100B80298 /* FKLSquareCell.m in Sources */,
 				BC16A64D1D6EBB750005B505 /* FKLWordViewController.m in Sources */,
 				BC16A64A1D6EBB040005B505 /* FKLVoiceViewController.m in Sources */,
-				BC2307F21D7036150045843C /* FKLVideoCell.m in Sources */,
 				BC7426751D6AC3AC0011AB76 /* UIView+Frame.m in Sources */,
 				BC6897601D6C3393004AAB53 /* FKLLoginRegisterView.m in Sources */,
-				BC2307EF1D702C680045843C /* FKLTopicCell.m in Sources */,
-				BC2307F81D7036380045843C /* FKLPictureCell.m in Sources */,
 				BC16A63B1D6E80C20005B505 /* FKLFileTool.m in Sources */,
 				BC7426831D6AD97F0011AB76 /* FKLSettingViewController.m in Sources */,
 			);
@@ -939,12 +949,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "BuDeJie/Classes/Other(其它)/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cnblogs.www-fkunlam-.BuDeJie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -955,12 +967,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "BuDeJie/Classes/Other(其它)/BuDeJie.pch";
 				INFOPLIST_FILE = BuDeJie/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cnblogs.www-fkunlam-.BuDeJie";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

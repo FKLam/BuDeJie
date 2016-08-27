@@ -11,10 +11,7 @@
 #import "FKLTopic.h"
 #import <MJExtension.h>
 #import <SVProgressHUD.h>
-#import "FKLVideoCell.h"
-#import "FKLVoiceCell.h"
-#import "FKLPictureCell.h"
-#import "FKLWordCell.h"
+#import "FKLTopicCell.h"
 
 @interface FKLAllViewController ()
 /** 网络请求管理者 */
@@ -34,28 +31,25 @@
 /** 上拉刷新控件是否正在刷新标示 */
 @property (nonatomic, assign, getter=isFooterRefreshing) BOOL footerRefreshing;
 /** 数据量 */
-@property (nonatomic, strong) NSMutableArray *topics;
+@property (nonatomic, strong) NSMutableArray<FKLTopic *> *topics;
 @end
 
-static NSString * const FKLVideoCellID = @"FKLVideoCellID";
-static NSString * const FKLPictureCellID = @"FKLPictureCellID";
-static NSString * const FKLVoiceCellID = @"FKLVoiceCellID";
-static NSString * const FKLWordCellID = @"FKLWordCellID";
+static NSString * const FKLTopicCellID = @"FKLTopicCellID";
 
 @implementation FKLAllViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.tableView.backgroundColor = [UIColor lightGrayColor];
+    // 设置cell的估算高度（每一行大约都是estimatedRowHeight）
+//    self.tableView.estimatedRowHeight = 44;
     // 注册cell
-    [self.tableView registerClass:[FKLVideoCell class] forCellReuseIdentifier:FKLVideoCellID];
-    [self.tableView registerClass:[FKLVoiceCell class] forCellReuseIdentifier:FKLVoiceCellID];
-    [self.tableView registerClass:[FKLPictureCell class] forCellReuseIdentifier:FKLPictureCellID];
-    [self.tableView registerClass:[FKLWordCell class] forCellReuseIdentifier:FKLWordCellID];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FKLTopicCell class]) bundle:nil] forCellReuseIdentifier:FKLTopicCellID];
     
     // 添加内边距
     self.tableView.contentInset = UIEdgeInsetsMake(FKLNaviMaxY + FKLTitleViewH, 0, FKLTabBarH, 0);
     self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(FKLNaviMaxY + FKLTitleViewH, 0, FKLTabBarH, 0);
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tabBarButtonRepeatClick) name:FKLTabBarButtonDidRepeatClickNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(titleButtonRepeatClick) name:FKLTitleButtonDidRepeatClickNotification object:nil];
     [self setupRefresh];
@@ -169,15 +163,16 @@ static NSString * const FKLWordCellID = @"FKLWordCellID";
 - (void)loadNewTopic
 {
     // 取消上一次的请求
-    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    if ( 0 < self.manager.tasks.count )
+        [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     // 拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1";
+    parameters[@"type"] = @"31";
     // 发送请求
     [self.manager GET:FKLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        FKLLog(@"%@", responseObject);
+        
         self.maxtime = responseObject[@"info"][@"maxtime"];
         NSMutableArray *tempTopics = [FKLTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         if ( 0 != self.topics.count )
@@ -197,12 +192,13 @@ static NSString * const FKLWordCellID = @"FKLWordCellID";
 - (void)loadMoreTopic
 {
     // 取消上一次的请求
-    [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
+    if ( 0 < self.manager.tasks.count )
+        [self.manager.tasks makeObjectsPerformSelector:@selector(cancel)];
     // 拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
     parameters[@"a"] = @"list";
     parameters[@"c"] = @"data";
-    parameters[@"type"] = @"1";
+    parameters[@"type"] = @"31";
     parameters[@"maxtime"] = self.maxtime;
     // 发送请求
     [self.manager GET:FKLCommonURL parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -274,21 +270,15 @@ static NSString * const FKLWordCellID = @"FKLWordCellID";
 {
     FKLTopic *topic = self.topics[indexPath.row];
     FKLTopicCell *cell = nil;
-    if ( FKLTopicTypePicture == topic.type ) {
-        // 图片
-        cell = [tableView dequeueReusableCellWithIdentifier:FKLPictureCellID];
-    } else if ( FKLTopicTypeWord == topic.type ) {
-        // 段子
-        cell = [tableView dequeueReusableCellWithIdentifier:FKLWordCellID];
-    } else if ( FKLTopicTypeVoice == topic.type ) {
-        // 声音
-        cell = [tableView dequeueReusableCellWithIdentifier:FKLVoiceCellID];
-    } else if ( FKLTopicTypeVideo == topic.type ) {
-        // 视频
-        cell = [tableView dequeueReusableCellWithIdentifier:FKLVideoCellID];
-    }
+    cell = [tableView dequeueReusableCellWithIdentifier:FKLTopicCellID];
     cell.topic = topic;
     return cell;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    FKLTopic *topic = self.topics[indexPath.row];
+    
+    return topic.cellHeight;
 }
 #pragma mark - getter methods
 - (NSMutableArray *)topics

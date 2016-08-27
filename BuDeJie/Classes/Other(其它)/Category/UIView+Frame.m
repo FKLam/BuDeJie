@@ -79,4 +79,8 @@
     CGPoint center = self.center;
     return center.y;
 }
++ (instancetype)fkl_viewFromXib
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+}
 @end

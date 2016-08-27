@@ -38,6 +38,28 @@ typedef NS_ENUM(NSUInteger, FKLTopicType) {
 @property (nonatomic, assign) NSInteger repost;
 /** 评论数量 */
 @property (nonatomic, assign) NSInteger comment;
+/** 声音图片宽度 */
+@property (nonatomic, assign) NSInteger width;
+/** 声音图片高度 */
+@property (nonatomic, assign) NSInteger height;
 /** 帖子类型 10为图片，29为段子，31为音频，41为视频 */
 @property (nonatomic, assign) FKLTopicType type;
+/** 当前模型对应cell的高度 */
+@property (nonatomic, assign) CGFloat cellHeight;
+/** 最热评论 */
+@property (nonatomic, strong) NSArray * top_cmt;
+/** 中间内容的frame */
+@property (nonatomic, assign) CGRect middleFrame;
+/** 小图 */
+@property (nonatomic, copy) NSString *image0;
+/** 中图 */
+@property (nonatomic, copy) NSString *image2;
+/** 大图 */
+@property (nonatomic, copy) NSString *image1;
+/** 音频时长 秒 */
+@property (nonatomic, assign) NSInteger voicetime;
+/** 视频时长 秒 */
+@property (nonatomic, assign) NSInteger videotime;
+/** 音频／视频的播放次数 */
+@property (nonatomic, assign) NSInteger playcount;
 @end
