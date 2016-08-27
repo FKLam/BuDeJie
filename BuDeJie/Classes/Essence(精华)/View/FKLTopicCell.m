@@ -95,6 +95,7 @@
             [self.pictureView setHidden:NO];
             [self.videoView setHidden:YES];
             [self.voiceView setHidden:YES];
+            self.pictureView.topic = topic;
             break;
         }
         case FKLTopicTypeVideo:

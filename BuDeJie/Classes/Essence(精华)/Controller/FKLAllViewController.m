@@ -159,7 +159,7 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
 #pragma mark - 数据处理
 - (FKLTopicType)type
 {
-    return FKLTopicTypeVideo;
+    return FKLTopicTypePicture;
 }
 /**
  *  发送请求给服务器，下拉刷新数据
