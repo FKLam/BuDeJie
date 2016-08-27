@@ -12,6 +12,7 @@
 #import "FKLTopicVideoView.h"
 #import "FKLTopicVoiceView.h"
 #import "FKLTopicPictureView.h"
+#import "UIImageView+FKLDownload.h"
 
 @interface FKLTopicCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
@@ -57,12 +58,7 @@
 - (void)setTopic:(FKLTopic *)topic
 {
     _topic = topic;
-    [self.profileImageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage fkl_circleImageName:@"defaultUserIcon"]  options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-        // 图片下载失败 直接返回 按照它的默认做法
-        if ( !image ) return;
-        
-        self.profileImageView.image = [image fkl_circleImage];
-    }];
+    [self.profileImageView fkl_setCircleHeader:topic.profile_image];
     
     self.nameLabel.text = topic.name;
     self.passTimeLabel.text = topic.passtime;

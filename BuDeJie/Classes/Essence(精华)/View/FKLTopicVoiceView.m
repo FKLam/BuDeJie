@@ -7,8 +7,7 @@
 //
 
 #import "FKLTopicVoiceView.h"
-#import <UIImageView+WebCache.h>
-#import <AFNetworking.h>
+#import "UIImageView+FKLDownload.h"
 
 @interface FKLTopicVoiceView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -28,37 +27,9 @@
 {
     _topic = topic;
     
-    // 根据网络状态来加载图片
-    AFNetworkReachabilityManager *mgr = [AFNetworkReachabilityManager sharedManager];
-    // 在沙盒中取缓存图片
-    UIImage *cacheImage1 = [[SDImageCache sharedImageCache]
-                            imageFromDiskCacheForKey:topic.image1];
-    if ( cacheImage1 )
-    {
-        self.imageView.image = cacheImage1;
-    }
-    else
-    {
-        if ( mgr.isReachableViaWiFi )
-        {
-            [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.image1]];
-        }
-        else if ( mgr.isReachableViaWWAN )
-        {
-            [self.imageView sd_setImageWithURL:[NSURL URLWithString:self.topic.image0]];
-        }
-        else
-        {
-            // 没有网络
-            UIImage *thumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:topic.image0];
-            if ( thumbnailImage )
-            {
-                self.imageView.image = thumbnailImage;
-            }
-            else
-                self.imageView.image = nil; // 占位图
-        }
-    }
+    // 设置图片
+    [self.imageView fkl_setOriginImage:topic.image1 thumbnailImage:topic.image0 placeholderImage:nil];
+    
     if ( 10000 <= topic.playcount )
     {
         NSString *playStr = [NSString stringWithFormat:@"%.1f万播放", topic.playcount / 10000.0];
