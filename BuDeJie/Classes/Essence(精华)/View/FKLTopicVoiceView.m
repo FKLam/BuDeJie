@@ -8,6 +8,7 @@
 
 #import "FKLTopicVoiceView.h"
 #import "UIImageView+FKLDownload.h"
+#import "FKLSeeBigPictureViewController.h"
 
 @interface FKLTopicVoiceView ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
@@ -22,6 +23,14 @@
 - (void)awakeFromNib
 {
     self.autoresizingMask = UIViewAutoresizingNone;
+    [self.imageView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeBigPicture)]];
+}
+// 查看大图
+- (void)seeBigPicture
+{
+    FKLSeeBigPictureViewController *seeBigPictureVC = [[FKLSeeBigPictureViewController alloc] init];
+    seeBigPictureVC.topic = self.topic;
+    [self.window.rootViewController presentViewController:seeBigPictureVC animated:YES completion:nil];
 }
 
 - (void)setTopic:(FKLTopic *)topic

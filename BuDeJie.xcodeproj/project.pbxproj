@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC14C1701D72A57C00ECE0AF /* FKLTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC14C16F1D72A57C00ECE0AF /* FKLTopicViewController.m */; };
 		BC14CE8C1D6DC17100B80298 /* FKLSquareCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC14CE8A1D6DC17100B80298 /* FKLSquareCell.m */; };
 		BC14CE8D1D6DC17100B80298 /* FKLSquareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC14CE8B1D6DC17100B80298 /* FKLSquareCell.xib */; };
 		BC14CE901D6DD9A900B80298 /* FKLSquareItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC14CE8F1D6DD9A900B80298 /* FKLSquareItem.m */; };
@@ -37,6 +38,8 @@
 		BC1A05681D6D54F70024305D /* UITextField+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1A05671D6D54F70024305D /* UITextField+Placeholder.m */; };
 		BC1A056A1D6D67FC0024305D /* FKLMeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1A05691D6D67FC0024305D /* FKLMeViewController.storyboard */; };
 		BC1BF0231D716AFB0093E100 /* UIImageView+FKLDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1BF0221D716AFB0093E100 /* UIImageView+FKLDownload.m */; };
+		BC1BF0271D71A85E0093E100 /* FKLSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC1BF0251D71A85E0093E100 /* FKLSeeBigPictureViewController.m */; };
+		BC1BF0281D71A85E0093E100 /* FKLSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC1BF0261D71A85E0093E100 /* FKLSeeBigPictureViewController.xib */; };
 		BC68974B1D6BD2AF004AAB53 /* FKLADItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */; };
 		BC68974E1D6BE3F4004AAB53 /* FKLSubTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC68974D1D6BE3F4004AAB53 /* FKLSubTagViewController.m */; };
 		BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */ = {isa = PBXBuildFile; fileRef = BC6897501D6BE815004AAB53 /* FKLSubTagItem.m */; };
@@ -77,6 +80,8 @@
 
 /* Begin PBXFileReference section */
 		317728C48762837B0FA06524 /* libPods-BuDeJie.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BuDeJie.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC14C16E1D72A57C00ECE0AF /* FKLTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLTopicViewController.h; sourceTree = "<group>"; };
+		BC14C16F1D72A57C00ECE0AF /* FKLTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLTopicViewController.m; sourceTree = "<group>"; };
 		BC14CE891D6DC17100B80298 /* FKLSquareCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSquareCell.h; sourceTree = "<group>"; };
 		BC14CE8A1D6DC17100B80298 /* FKLSquareCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLSquareCell.m; sourceTree = "<group>"; };
 		BC14CE8B1D6DC17100B80298 /* FKLSquareCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLSquareCell.xib; sourceTree = "<group>"; };
@@ -128,6 +133,9 @@
 		BC1A05691D6D67FC0024305D /* FKLMeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FKLMeViewController.storyboard; sourceTree = "<group>"; };
 		BC1BF0211D716AFB0093E100 /* UIImageView+FKLDownload.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+FKLDownload.h"; sourceTree = "<group>"; };
 		BC1BF0221D716AFB0093E100 /* UIImageView+FKLDownload.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+FKLDownload.m"; sourceTree = "<group>"; };
+		BC1BF0241D71A85E0093E100 /* FKLSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		BC1BF0251D71A85E0093E100 /* FKLSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		BC1BF0261D71A85E0093E100 /* FKLSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FKLSeeBigPictureViewController.xib; sourceTree = "<group>"; };
 		BC6897491D6BD2AF004AAB53 /* FKLADItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLADItem.h; sourceTree = "<group>"; };
 		BC68974A1D6BD2AF004AAB53 /* FKLADItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKLADItem.m; sourceTree = "<group>"; };
 		BC68974C1D6BE3F4004AAB53 /* FKLSubTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKLSubTagViewController.h; sourceTree = "<group>"; };
@@ -262,6 +270,11 @@
 				BC16A6491D6EBB040005B505 /* FKLVoiceViewController.m */,
 				BC16A64B1D6EBB750005B505 /* FKLWordViewController.h */,
 				BC16A64C1D6EBB750005B505 /* FKLWordViewController.m */,
+				BC1BF0241D71A85E0093E100 /* FKLSeeBigPictureViewController.h */,
+				BC1BF0251D71A85E0093E100 /* FKLSeeBigPictureViewController.m */,
+				BC1BF0261D71A85E0093E100 /* FKLSeeBigPictureViewController.xib */,
+				BC14C16E1D72A57C00ECE0AF /* FKLTopicViewController.h */,
+				BC14C16F1D72A57C00ECE0AF /* FKLTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -739,6 +752,7 @@
 				BCC3D2DD1D6A01FC0036A834 /* Assets.xcassets in Resources */,
 				BC1643C81D71318700320F68 /* FKLTopicVoiceView.xib in Resources */,
 				BC7426971D6B52910011AB76 /* LaunchImage-700@2x.png in Resources */,
+				BC1BF0281D71A85E0093E100 /* FKLSeeBigPictureViewController.xib in Resources */,
 				BC14CE8D1D6DC17100B80298 /* FKLSquareCell.xib in Resources */,
 				BC7426991D6B52910011AB76 /* LaunchImage-800-Portrait-736h@3x.png in Resources */,
 				BC7426951D6B52910011AB76 /* LaunchImage-568h@2x.png in Resources */,
@@ -822,8 +836,10 @@
 				BC16A63E1D6EA5BA0005B505 /* FKLTitleButton.m in Sources */,
 				BC1A055D1D6D39670024305D /* FKLFastLoginView.m in Sources */,
 				BC1643C61D71317100320F68 /* FKLTopicPictureView.m in Sources */,
+				BC1BF0271D71A85E0093E100 /* FKLSeeBigPictureViewController.m in Sources */,
 				BC16A6441D6EBADF0005B505 /* FKLPictureViewController.m in Sources */,
 				BC7426611D6A7D800011AB76 /* FKLNewViewController.m in Sources */,
+				BC14C1701D72A57C00ECE0AF /* FKLTopicViewController.m in Sources */,
 				BC1643BE1D712D5000320F68 /* FKLTopicVideoView.m in Sources */,
 				BC6897511D6BE815004AAB53 /* FKLSubTagItem.m in Sources */,
 				BC1A05681D6D54F70024305D /* UITextField+Placeholder.m in Sources */,

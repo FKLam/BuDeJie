@@ -30,7 +30,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Tp-KV-qhq" userLabel="更多">
                         <rect key="frame" x="341" y="10" width="24" height="22"/>
                         <state key="normal" image="cellmorebtnnormal">
-                            <color key="titleColor" red="0.78087348970000003" green="1" blue="0.6918021271" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uV3-se-mXC" userLabel="时间">
