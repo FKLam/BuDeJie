@@ -300,4 +300,8 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
     }
     return _manager;
 }
+- (FKLTopicType)topicType
+{
+    return FKLTopicTypeAll;
+}
 @end

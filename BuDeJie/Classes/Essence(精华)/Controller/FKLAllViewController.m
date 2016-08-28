@@ -13,4 +13,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 }
+- (FKLTopicType)topicType
+{
+    return FKLTopicTypeAll;
+}
 @end

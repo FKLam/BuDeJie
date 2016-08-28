@@ -10,5 +10,5 @@
 #import "FKLTopic.h"
 
 @interface FKLTopicViewController : UITableViewController
-@property (nonatomic, assign) FKLTopicType topicType;
+- (FKLTopicType)topicType;
 @end

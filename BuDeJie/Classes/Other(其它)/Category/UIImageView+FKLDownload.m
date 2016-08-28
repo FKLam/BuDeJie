@@ -20,8 +20,9 @@
                             imageFromDiskCacheForKey:originImageURL];
     if ( cacheImage1 )
     {
-        self.image = cacheImage1;
-        completedBlock(cacheImage1, nil, 0, [NSURL URLWithString:originImageURL]);
+//        self.image = cacheImage1;
+//        completedBlock(cacheImage1, nil, 0, [NSURL URLWithString:originImageURL]);
+        [self sd_setImageWithURL:[NSURL URLWithString:originImageURL] completed:completedBlock];
     }
     else
     {
@@ -39,11 +40,15 @@
             UIImage *cacheThumbnailImage = [[SDImageCache sharedImageCache] imageFromDiskCacheForKey:thumbnailImageURL];
             if ( cacheThumbnailImage )
             {
-                self.image = cacheThumbnailImage;
-                completedBlock( cacheThumbnailImage, nil, 0, [NSURL URLWithString:thumbnailImageURL]);
+//                self.image = cacheThumbnailImage;
+//                completedBlock( cacheThumbnailImage, nil, 0, [NSURL URLWithString:thumbnailImageURL]);
+                [self sd_setImageWithURL:[NSURL URLWithString:thumbnailImageURL] completed:completedBlock];
             }
             else
-                self.image = placeholderImage; // 占位图
+            {
+//                self.image = placeholderImage; // 占位图
+                [self sd_setImageWithURL:nil placeholderImage:placeholderImage completed:completedBlock];
+            }
         }
     }
 }
