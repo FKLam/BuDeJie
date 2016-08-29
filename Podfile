@@ -10,4 +10,5 @@ target 'BuDeJie' do
   pod 'MJExtension'
   pod 'SDWebImage'
   pod 'SVProgressHUD'
+  pod 'MJRefresh'
 end

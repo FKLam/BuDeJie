@@ -12,24 +12,13 @@
 #import <SVProgressHUD.h>
 #import "FKLTopicCell.h"
 #import <UIImageView+WebCache.h>
+#import <MJRefresh.h>
 
 @interface FKLTopicViewController ()
 /** 网络请求管理者 */
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
 /** 当前最后一条帖子数据的描述信息，加载下一页数据 */
 @property (nonatomic, copy) NSString *maxtime;
-/** 下拉刷新控件 */
-@property (nonatomic, strong) UIView *header;
-/** 下拉刷新控件里面的文字 */
-@property (nonatomic, strong) UILabel *headerLabel;
-/** 下拉刷新控件是否正在刷新标示 */
-@property (nonatomic, assign, getter=isHeaderRefreshing) BOOL headerRefreshing;
-/** 上拉刷新控件 */
-@property (nonatomic, strong) UIView *footer;
-/** 上拉刷新控件里面的文字 */
-@property (nonatomic, strong) UILabel *footerLabel;
-/** 上拉刷新控件是否正在刷新标示 */
-@property (nonatomic, assign, getter=isFooterRefreshing) BOOL footerRefreshing;
 /** 数据量 */
 @property (nonatomic, strong) NSMutableArray<FKLTopic *> *topics;
 @end
@@ -61,7 +50,8 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
         return;
     if ( NO == self.tableView.scrollsToTop )
         return;
-    [self headerBeginRefreshing];
+    // 进入下拉刷新
+    [self.tableView.mj_header beginRefreshing];
 }
 - (void)titleButtonRepeatClick
 {
@@ -77,43 +67,18 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
 - (void)setupRefresh
 {
     // header
-    UIView *header = [[UIView alloc] init];
-    header.frame = CGRectMake(0, -50, self.tableView.fkl_width, 50);
-    UILabel *headerLabel = [[UILabel alloc] init];
-    headerLabel.frame = header.bounds;
-    headerLabel.backgroundColor = [UIColor redColor];
-    headerLabel.text = @"下拉可以刷新";
-    headerLabel.textColor = [UIColor whiteColor];
-    headerLabel.textAlignment = NSTextAlignmentCenter;
-    [header addSubview:headerLabel];
-    self.header = header;
-    self.headerLabel = headerLabel;
-    [self.tableView addSubview:self.header];
-    [self headerBeginRefreshing];
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewTopic)];
+    // 自动修改透明度
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
     
     // footer
-    UIView *footer = [[UIView alloc] init];
-    footer.frame = CGRectMake(0, 0, self.tableView.fkl_width, 35);
-    UILabel *footerLabel = [[UILabel alloc] init];
-    footerLabel.frame = footer.bounds;
-    footerLabel.backgroundColor = [UIColor redColor];
-    footerLabel.text = @"上拉可以加载更多";
-    footerLabel.textColor = [UIColor whiteColor];
-    footerLabel.textAlignment = NSTextAlignmentCenter;
-    [footer addSubview:footerLabel];
-    self.tableView.tableFooterView = footer;
-    self.footer = footer;
-    self.footerLabel = footerLabel;
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreTopic)];
+    
 }
 #pragma mark - UIScrollView 代理
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    // 处理header
-    [self dealHeader];
-    
-    // 处理footer
-    [self dealFooter];
-    
     // 清除内存
     [[SDImageCache sharedImageCache] clearMemory];
 }
@@ -122,42 +87,7 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
  */
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    CGFloat offsetY = -( self.tableView.contentInset.top + self.header.fkl_height );
-    if ( self.tableView.contentOffset.y <= offsetY )
-    {
-        [self headerBeginRefreshing];
-    }
-}
-// 处理header
-- (void)dealHeader
-{
-    // 如果正在下拉刷新，直接返回
-    if ( self.isHeaderRefreshing == YES ) return;
-    CGFloat offsetY = -( self.tableView.contentInset.top + self.header.fkl_height );
-    if ( self.tableView.contentOffset.y <= offsetY )
-    {
-        self.headerLabel.text = @"松开立即刷新";
-    }
-    else
-    {
-        self.headerLabel.text = @"下拉可以刷新";
-    }
-}
-// 处理footer
-- (void)dealFooter
-{
-    // 还没有任何内容时，不需要判断
-    if ( 0 == self.tableView.contentSize.height ) return;
-    // 如果正在刷新，直接返回
-    if ( YES == self.isFooterRefreshing ) return;
-    // 当scrollView的偏移量y值 >= offsetY时，代表footer已经完全出现
-    CGFloat offsetY = self.tableView.contentSize.height + self.tableView.contentInset.bottom - self.tableView.fkl_height;
-    if ( self.tableView.contentOffset.y >= offsetY  &&
-        self.tableView.contentOffset.y > - ( self.tableView.contentInset.top ))
-    {
-        // 进入刷新状态
-        [self footerBeginRefreshing];
-    }
+    
 }
 #pragma mark - 数据处理
 /**
@@ -182,11 +112,13 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
             [self.topics removeAllObjects];
         [self.topics addObjectsFromArray:tempTopics];
         [self.tableView reloadData];
-        [self headerEndRefreshing];
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if ( error.code != NSURLErrorCancelled )
             [SVProgressHUD showErrorWithStatus:@"网络繁忙"];
-        [self headerEndRefreshing];
+        // 结束刷新
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 /**
@@ -209,55 +141,13 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
         NSMutableArray *tempTopics = [FKLTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         [self.topics addObjectsFromArray:tempTopics];
         [self.tableView reloadData];
-        [self footerEndRefreshing];
+        // 结束刷新
+        [self.tableView.mj_footer endRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if ( error.code != NSURLErrorCancelled )
             [SVProgressHUD showErrorWithStatus:@"网络繁忙"];
-        [self footerEndRefreshing];
+        [self.tableView.mj_footer endRefreshing];
     }];
-}
-#pragma mark - header
-- (void)headerBeginRefreshing
-{
-    //    if ( YES == self.isFooterRefreshing ) return;
-    if ( YES == self.isHeaderRefreshing ) return;
-    self.headerRefreshing = YES;
-    self.headerLabel.text = @"正在刷新数据...";
-    // 增加内边距
-    [UIView animateWithDuration:0.25 animations:^{
-        UIEdgeInsets inset = self.tableView.contentInset;
-        inset.top += self.header.fkl_height;
-        self.tableView.contentInset = inset;
-        // 修改偏移量
-        self.tableView.contentOffset = CGPointMake(self.tableView.contentOffset.x, -inset.top);
-    }];
-    // 发送刷新数据请求
-    [self loadNewTopic];
-}
-- (void)headerEndRefreshing
-{
-    self.headerRefreshing = NO;
-    [UIView animateWithDuration:0.25 animations:^{
-        UIEdgeInsets inset = self.tableView.contentInset;
-        inset.top -= self.header.fkl_height;
-        self.tableView.contentInset = inset;
-    }];
-    self.headerLabel.text = @"下拉可以刷新";
-}
-#pragma mark - footer
-- (void)footerBeginRefreshing
-{
-    //    if ( YES == self.isHeaderRefreshing ) return;
-    if ( YES == self.isFooterRefreshing ) return;
-    self.footerRefreshing = YES;
-    self.footerLabel.text = @"正在加载更多数据...";
-    // 发送请求给服务器
-    [self loadMoreTopic];
-}
-- (void)footerEndRefreshing
-{
-    self.footerRefreshing = NO;
-    self.footerLabel.text = @"上拉可以加载更多";
 }
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -266,7 +156,7 @@ static NSString * const FKLTopicCellID = @"FKLTopicCellID";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // 根据数据量显示或者隐藏footer
     NSUInteger count = self.topics.count;
-    self.footer.hidden = ( count == 0 );
+    self.tableView.mj_footer.hidden = ( count == 0 );
     return count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
