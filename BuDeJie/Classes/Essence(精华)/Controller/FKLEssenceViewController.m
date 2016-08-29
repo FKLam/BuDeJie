@@ -55,6 +55,22 @@
     [self addChildViewController:[[FKLVoiceViewController alloc] init]];
     [self addChildViewController:[[FKLPictureViewController alloc] init]];
     [self addChildViewController:[[FKLWordViewController alloc] init]];
+    
+//    FKLTopicViewController *allVC = [[FKLAllViewController alloc] init];
+//    allVC.topicType = FKLTopicTypeAll;
+//    [self addChildViewController:allVC];
+//    FKLTopicViewController *videoVC = [[FKLVideoViewController alloc] init];
+//    videoVC.topicType = FKLTopicTypeVideo;
+//    [self addChildViewController:videoVC];
+//    FKLTopicViewController *voiceVC = [[FKLVoiceViewController alloc] init];
+//    voiceVC.topicType = FKLTopicTypeVoice;
+//    [self addChildViewController:voiceVC];
+//    FKLTopicViewController *pictureVC = [[FKLPictureViewController alloc] init];
+//    pictureVC.topicType = FKLTopicTypePicture;
+//    [self addChildViewController:pictureVC];
+//    FKLTopicViewController *wordVC = [[FKLWordViewController alloc] init];
+//    wordVC.topicType = FKLTopicTypeWord;
+//    [self addChildViewController:wordVC];
 }
 - (void)setupScrollView
 {

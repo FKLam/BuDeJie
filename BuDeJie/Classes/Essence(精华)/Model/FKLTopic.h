@@ -62,4 +62,9 @@ typedef NS_ENUM(NSUInteger, FKLTopicType) {
 @property (nonatomic, assign) NSInteger videotime;
 /** 音频／视频的播放次数 */
 @property (nonatomic, assign) NSInteger playcount;
+/** 是否为动图 */
+@property (nonatomic, assign) BOOL is_gif;
+/** 是否为长图 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+
 @end

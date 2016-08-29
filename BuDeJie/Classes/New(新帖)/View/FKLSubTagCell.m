@@ -7,8 +7,7 @@
 //
 
 #import "FKLSubTagCell.h"
-#import <UIImageView+WebCache.h>
-
+#import "UIImageView+FKLDownload.h"
 /*
  头像变成圆角 1，设置头像圆角 2，裁剪图片
  处理数字
@@ -31,9 +30,9 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    // 设置头像圆角
-    _iconView.layer.cornerRadius = 30.0;
-    _iconView.layer.masksToBounds = YES;
+//    // 设置头像圆角
+//    _iconView.layer.cornerRadius = 30.0;
+//    _iconView.layer.masksToBounds = YES;
     // 清空cell的约束边缘
 //    self.layoutMargins = UIEdgeInsetsZero;
 }
@@ -50,25 +49,8 @@
     
     // 设置内容
     [self resolveNum];
-    
     _nameLabel.text = item.theme_name;
-//    __weak typeof( self ) weakSelf = self;
-//    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"] options:SDWebImageCacheMemoryOnly completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
-//        // 开启图形上下文
-//        UIGraphicsBeginImageContextWithOptions(image.size, NO, 0);
-//        // 描述裁剪区域
-//        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
-//        // 设置裁剪区域
-//        [path addClip];
-//        // 画图片
-//        [image drawAtPoint:CGPointZero];
-//        // 取出图片
-//        image = UIGraphicsGetImageFromCurrentImageContext();
-//        // 关闭上下文
-//        UIGraphicsEndImageContext();
-//        weakSelf.iconView.image = image;
-//    }];
-    [_iconView sd_setImageWithURL:[NSURL URLWithString:item.image_list] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    [_iconView fkl_setCircleHeader:item.image_list];
 }
 // 处理订阅数据
 - (void)resolveNum

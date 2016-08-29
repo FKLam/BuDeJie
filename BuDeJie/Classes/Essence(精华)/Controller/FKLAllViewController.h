@@ -6,8 +6,7 @@
 //  Copyright © 2016年 kun. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface FKLAllViewController : UITableViewController
+#import "FKLTopicViewController.h"
+@interface FKLAllViewController : FKLTopicViewController
 
 @end

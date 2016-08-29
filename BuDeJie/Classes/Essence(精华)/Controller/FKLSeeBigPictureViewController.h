@@ -1,5 +1,5 @@
 //
-//  FKLTopicPictureView.h
+//  FKLSeeBigPictureViewController.h
 //  BuDeJie
 //
 //  Created by kun on 16/8/27.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 @class FKLTopic;
-@interface FKLTopicPictureView : UIView
-
-/** 模型数据 */
+@interface FKLSeeBigPictureViewController : UIViewController
 @property (nonatomic, strong) FKLTopic *topic;
 @end

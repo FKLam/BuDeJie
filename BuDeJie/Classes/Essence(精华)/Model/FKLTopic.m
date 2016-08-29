@@ -22,6 +22,11 @@
     {
         CGFloat middleW = textMaxSize.width;
         CGFloat middleH = middleW * self.height / self.width;
+        if ( FKLScreenH <= middleH )
+        {
+            middleH = 200;
+            self.bigPicture = YES;
+        }
         CGFloat middleY = _cellHeight;
         CGFloat middleX = FKLMargin;
         self.middleFrame = CGRectMake(middleX, middleY, middleW, middleH);

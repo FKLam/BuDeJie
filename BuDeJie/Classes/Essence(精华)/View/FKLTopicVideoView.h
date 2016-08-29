@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class FKLTopic;
 @interface FKLTopicVideoView : UIView
+/** 模型数据 */
+@property (nonatomic, strong) FKLTopic *topic;
 
 @end
